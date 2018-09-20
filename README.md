@@ -1,1 +1,1 @@
-# sfdx-analytics
+# SFDX Analytics
