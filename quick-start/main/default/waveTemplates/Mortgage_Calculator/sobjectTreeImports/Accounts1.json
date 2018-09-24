@@ -1,0 +1,48 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "ref1"
+      },
+      "name": "SampleAccount",
+      "phone": "1234567890",
+      "website": "www.salesforce.com",
+      "numberOfEmployees": "100",
+      "industry": "Banking",
+      "Contacts": {
+        "records": [
+          {
+            "attributes": {
+              "type": "Contact",
+              "referenceId": "ref2"
+            },
+            "lastname": "Smith",
+            "title": "President",
+            "email": "sample@salesforce.com"
+          },
+          {
+            "attributes": {
+              "type": "Contact",
+              "referenceId": "ref3"
+            },
+            "lastname": "Evans",
+            "title": "Vice President",
+            "email": "sample@salesforce.com"
+          }
+        ]
+      }
+    },
+    {
+      "attributes": {
+        "type": "Account",
+        "referenceId": "ref4"
+      },
+      "name": "SampleAccount2",
+      "phone": "1234567890",
+      "website": "www.salesforce2.com",
+      "numberOfEmployees": "100",
+      "industry": "Banking"
+    }
+  ]
+}

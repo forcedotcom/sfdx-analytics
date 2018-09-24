@@ -1,0 +1,25 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Opportunity",
+        "referenceId": "ref1"
+      },
+      "Name": "Sample Oppty",
+      "StageName": "Closed Won",
+      "AccountId": "${App.ExtendedTypes.sobjectTreeImports.Accounts1.ref1}",
+      "CloseDate": "2018-07-01",
+      "OpportunityContactRoles": {
+        "records": [
+          {
+            "attributes": {
+              "type": "OpportunityContactRole",
+              "referenceId": "ref2"
+            },
+            "ContactId": "${App.ExtendedTypes.sobjectTreeImports.Accounts1.ref3}"
+          }
+        ]
+      }
+    }
+  ]
+}

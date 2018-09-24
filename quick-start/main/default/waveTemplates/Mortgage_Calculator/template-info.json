@@ -1,0 +1,61 @@
+{
+  "templateType" : "app",
+  "label" : "Mortgage Calculator",
+  "name" : "Mortgage_Calculator",
+  "assetVersion" : 43,
+  "variableDefinition" : "variables.json",
+  "uiDefinition" : "ui.json",
+  "rules" : [
+  {
+      "type" : "templateToApp",
+      "file" : "dashboard-rules.json"
+    },
+  {
+      "type" : "templateToApp",
+      "file" : "mort-calc-macros.json"
+    }
+  ],
+  "releaseInfo" : {
+    "templateVersion" : "1.5",
+    "notesFile" : "releaseNotes.html"
+  },
+  "folderDefinition" : "folder.json",
+  "externalFiles" : [ ],
+  "lenses" : [ ],
+  "dashboards" : [
+  {
+      "label" : "Amortized Schedule",
+      "name" : "mort_calc_Amortized_Schedule_tp",
+      "file" : "dashboards/Amortized_Schedule.json"
+    },
+  {
+      "label" : "Mortgage Calculator",
+      "name" : "mort_calc_Mortgage_Calculator_tp",
+      "file" : "dashboards/Mortgage_Calculator.json"
+    }
+  ],
+  "eltDataflows" : [ ],
+  "datasetFiles" : [ ],
+  "storedQueries" : [ ],
+  "imageFiles" : [
+  {
+      "name" : "info_icon_png613111",
+      "condition" : "${Variables.Overrides.createAllImages}",
+      "file" : "images/images/images/images/images/images/info_icon.png"
+    },
+  {
+      "name" : "bg_main_mountain_jpg613111",
+      "condition" : "${Variables.Overrides.createAllImages}",
+      "file" : "images/images/images/images/images/images/bg_main_mountain.jpg"
+    }
+  ],
+  "icons" : {
+    "appBadge" : {
+      "name" : "16.png"
+    },
+    "templateBadge" : {
+      "name" : "default.png"
+    },
+    "templateDetail" : { }
+  }
+}

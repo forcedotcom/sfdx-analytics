@@ -1,0 +1,1016 @@
+{
+  "name" : "mort_calc_Mortgage_Calculator_tp",
+  "label" : "Mortgage Calculator",
+  "folder" : {
+    "id" : "${App.Folder.Id}"
+  },
+  "mobileDisabled" : false,
+  "state" : {
+    "dataSourceLinks" : [ ],
+    "filters" : [ ],
+    "gridLayouts" : [
+  {
+        "maxWidth" : 1240,
+        "name" : "Default",
+        "numColumns" : 42,
+        "pages" : [
+  {
+            "label" : "Loan Summary",
+            "name" : "94532c58-034d-4ed9-a137-989c42bf63d3",
+            "navigationHidden" : false,
+            "widgets" : [
+  {
+                "colspan" : 6,
+                "column" : 0,
+                "name" : "nav_container",
+                "row" : 0,
+                "rowspan" : 90,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 6,
+                "column" : 0,
+                "name" : "nav_header",
+                "row" : 3,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 5,
+                "column" : 1,
+                "name" : "loan_summary_link_1",
+                "row" : 6,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 5,
+                "column" : 1,
+                "name" : "payment_schedule_link_1",
+                "row" : 9,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 5,
+                "column" : 1,
+                "name" : "loan_life_chart_link_1",
+                "row" : 12,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 25,
+                "column" : 6,
+                "name" : "page_header_container",
+                "row" : 0,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 12,
+                "column" : 6,
+                "name" : "summary_page_header_label",
+                "row" : 0,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 10,
+                "column" : 31,
+                "name" : "t_and_t_container",
+                "row" : 0,
+                "rowspan" : 90,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 10,
+                "column" : 31,
+                "name" : "t_and_t_label",
+                "row" : 3,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 9,
+                "column" : 32,
+                "name" : "extra_payment_info",
+                "row" : 6,
+                "rowspan" : 6,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 25,
+                "column" : 6,
+                "name" : "inner_body_container",
+                "row" : 3,
+                "rowspan" : 87,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 1,
+                "column" : 31,
+                "name" : "info_image_1",
+                "row" : 7,
+                "rowspan" : 2,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              }
+  ]
+          },
+  {
+            "label" : "Payment Schedule",
+            "name" : "87fa0f52-7055-46af-8455-7108748fee40",
+            "navigationHidden" : false,
+            "widgets" : [
+  {
+                "colspan" : 6,
+                "column" : 0,
+                "name" : "nav_container",
+                "row" : 0,
+                "rowspan" : 90,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 6,
+                "column" : 0,
+                "name" : "nav_header",
+                "row" : 3,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 5,
+                "column" : 1,
+                "name" : "loan_summary_link_2",
+                "row" : 6,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 5,
+                "column" : 1,
+                "name" : "payment_schedule_link_2",
+                "row" : 9,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 5,
+                "column" : 1,
+                "name" : "loan_life_chart_link_2",
+                "row" : 12,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 25,
+                "column" : 6,
+                "name" : "page_header_container",
+                "row" : 0,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 11,
+                "column" : 6,
+                "name" : "payment_schedule_label",
+                "row" : 0,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 10,
+                "column" : 31,
+                "name" : "t_and_t_container",
+                "row" : 0,
+                "rowspan" : 90,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 10,
+                "column" : 31,
+                "name" : "t_and_t_label",
+                "row" : 3,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 9,
+                "column" : 32,
+                "name" : "extra_payment_info",
+                "row" : 6,
+                "rowspan" : 6,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 25,
+                "column" : 6,
+                "name" : "inner_body_container",
+                "row" : 3,
+                "rowspan" : 87,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 1,
+                "column" : 31,
+                "name" : "info_image_1",
+                "row" : 7,
+                "rowspan" : 2,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 17,
+                "column" : 10,
+                "name" : "Amortization_Table",
+                "row" : 5,
+                "rowspan" : 57,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              }
+  ]
+          },
+  {
+            "label" : "Charted Loan Life",
+            "name" : "5c70ce1e-1bbc-4595-9e81-31f791c38a90",
+            "navigationHidden" : false,
+            "widgets" : [
+  {
+                "colspan" : 6,
+                "column" : 0,
+                "name" : "nav_container",
+                "row" : 0,
+                "rowspan" : 90,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 6,
+                "column" : 0,
+                "name" : "nav_header",
+                "row" : 3,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 5,
+                "column" : 1,
+                "name" : "loan_summary_link_3",
+                "row" : 6,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 5,
+                "column" : 1,
+                "name" : "payment_schedule_link_3",
+                "row" : 9,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 5,
+                "column" : 1,
+                "name" : "loan_life_chart_link_3",
+                "row" : 12,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 25,
+                "column" : 6,
+                "name" : "page_header_container",
+                "row" : 0,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 9,
+                "column" : 6,
+                "name" : "charted_loan_life_label",
+                "row" : 0,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 10,
+                "column" : 31,
+                "name" : "t_and_t_container",
+                "row" : 0,
+                "rowspan" : 90,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 10,
+                "column" : 31,
+                "name" : "t_and_t_label",
+                "row" : 3,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 9,
+                "column" : 32,
+                "name" : "extra_payment_info",
+                "row" : 6,
+                "rowspan" : 6,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 25,
+                "column" : 6,
+                "name" : "inner_body_container",
+                "row" : 3,
+                "rowspan" : 87,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+  {
+                "colspan" : 1,
+                "column" : 31,
+                "name" : "info_image_1",
+                "row" : 7,
+                "rowspan" : 2,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 25,
+                "column" : 6,
+                "name" : "Amortization_Chart",
+                "row" : 3,
+                "rowspan" : 48,
+                "widgetStyle" : {
+                  "backgroundColor" : "#F2F6FA",
+                  "borderEdges" : [ ]
+                }
+              }
+  ]
+          }
+  ],
+        "rowHeight" : "fine",
+        "selectors" : [ ],
+        "style" : {
+          "alignmentX" : "left",
+          "alignmentY" : "top",
+          "backgroundColor" : "#091A3E",
+          "cellSpacingX" : 0,
+          "cellSpacingY" : 0,
+          "documentId" : "",
+          "fit" : "original",
+          "gutterColor" : "#091A3E"
+        },
+        "version" : 1.0
+      }
+  ],
+    "layouts" : [ ],
+    "steps" : {
+      "Monthly_Payments" : {
+        "broadcastFacet" : true,
+        "label" : "Monthly Payments",
+        "selectMode" : "single",
+        "type" : "staticflex",
+        "values" : [
+  {
+            "Payment" : "1",
+            "Interest" : 0.06,
+            "Principal" : 1.64,
+            "Total" : 1.7,
+            "Beginning Balance" : "20",
+            "End Balance" : "18.36"
+          },
+  {
+            "Payment" : "2",
+            "Interest" : 0.05,
+            "Principal" : 1.65,
+            "Total" : 1.7,
+            "Beginning Balance" : "18.36",
+            "End Balance" : "16.71"
+          },
+  {
+            "Payment" : "3",
+            "Interest" : 0.05,
+            "Principal" : 1.65,
+            "Total" : 1.7,
+            "Beginning Balance" : "16.71",
+            "End Balance" : "15.06"
+          },
+  {
+            "Payment" : "4",
+            "Interest" : 0.04,
+            "Principal" : 1.66,
+            "Total" : 1.7,
+            "Beginning Balance" : "15.06",
+            "End Balance" : "13.4"
+          },
+  {
+            "Payment" : "5",
+            "Interest" : 0.04,
+            "Principal" : 1.66,
+            "Total" : 1.7,
+            "Beginning Balance" : "13.4",
+            "End Balance" : "11.74"
+          },
+  {
+            "Payment" : "6",
+            "Interest" : 0.03,
+            "Principal" : 1.67,
+            "Total" : 1.7,
+            "Beginning Balance" : "11.74",
+            "End Balance" : "10.07"
+          },
+  {
+            "Payment" : "7",
+            "Interest" : 0.03,
+            "Principal" : 1.67,
+            "Total" : 1.7,
+            "Beginning Balance" : "10.07",
+            "End Balance" : "8.4"
+          },
+  {
+            "Payment" : "8",
+            "Interest" : 0.02,
+            "Principal" : 1.68,
+            "Total" : 1.7,
+            "Beginning Balance" : "8.4",
+            "End Balance" : "6.72"
+          },
+  {
+            "Payment" : "9",
+            "Interest" : 0.02,
+            "Principal" : 1.68,
+            "Total" : 1.7,
+            "Beginning Balance" : "6.72",
+            "End Balance" : "5.04"
+          },
+  {
+            "Payment" : "10",
+            "Interest" : 0.01,
+            "Principal" : 1.69,
+            "Total" : 1.7,
+            "Beginning Balance" : "5.04",
+            "End Balance" : "3.35"
+          },
+  {
+            "Payment" : "11",
+            "Interest" : 0.01,
+            "Principal" : 1.69,
+            "Total" : 1.7,
+            "Beginning Balance" : "3.35",
+            "End Balance" : "1.66"
+          },
+  {
+            "Payment" : "12",
+            "Interest" : 0,
+            "Principal" : 1.66,
+            "Total" : 1.66,
+            "Beginning Balance" : "1.66",
+            "End Balance" : "0.0"
+          }
+  ]
+      }
+    },
+    "widgetStyle" : {
+      "backgroundColor" : "rgba(255, 255, 255, 0)",
+      "borderColor" : "#E6ECF2",
+      "borderEdges" : [ ],
+      "borderRadius" : 0,
+      "borderWidth" : 1
+    },
+    "widgets" : {
+      "page_header_container" : {
+        "parameters" : {
+          "alignmentX" : "left",
+          "alignmentY" : "top",
+          "fit" : "original"
+        },
+        "type" : "container"
+      },
+      "loan_summary_link_3" : {
+        "parameters" : {
+          "destinationLink" : {
+            "name" : "94532c58-034d-4ed9-a137-989c42bf63d3"
+          },
+          "destinationType" : "page",
+          "fontSize" : 12,
+          "includeState" : false,
+          "text" : "LOAN SUMMARY",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "link"
+      },
+      "nav_header" : {
+        "parameters" : {
+          "fontSize" : 12,
+          "text" : "NAVIGATION",
+          "textAlignment" : "left",
+          "textColor" : "#7D98B3"
+        },
+        "type" : "text"
+      },
+      "loan_summary_link_1" : {
+        "parameters" : {
+          "destinationLink" : {
+            "name" : "94532c58-034d-4ed9-a137-989c42bf63d3"
+          },
+          "destinationType" : "page",
+          "fontSize" : 12,
+          "includeState" : false,
+          "text" : "LOAN SUMMARY",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "link"
+      },
+      "loan_summary_link_2" : {
+        "parameters" : {
+          "destinationLink" : {
+            "name" : "94532c58-034d-4ed9-a137-989c42bf63d3"
+          },
+          "destinationType" : "page",
+          "fontSize" : 12,
+          "includeState" : false,
+          "text" : "LOAN SUMMARY",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "link"
+      },
+      "info_image_1" : {
+        "parameters" : {
+          "alignmentX" : "right",
+          "alignmentY" : "top",
+          "fit" : "original",
+          "image" : {
+            "name" : "${App.Images['info_icon_png613111'].Name}",
+            "namespace" : "${Org.Namespace}"
+          }
+        },
+        "type" : "image"
+      },
+      "t_and_t_container" : {
+        "parameters" : {
+          "alignmentX" : "left",
+          "alignmentY" : "top",
+          "fit" : "original"
+        },
+        "type" : "container"
+      },
+      "nav_container" : {
+        "parameters" : {
+          "alignmentX" : "left",
+          "alignmentY" : "top",
+          "fit" : "original"
+        },
+        "type" : "container"
+      },
+      "summary_page_header_label" : {
+        "parameters" : {
+          "fontSize" : 16,
+          "text" : "Loan Summary\n",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "text"
+      },
+      "t_and_t_label" : {
+        "parameters" : {
+          "fontSize" : 12,
+          "text" : "TIPS AND TRICKS",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "text"
+      },
+      "payment_schedule_label" : {
+        "parameters" : {
+          "fontSize" : 16,
+          "text" : "Payment Schedule",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "text"
+      },
+      "charted_loan_life_label" : {
+        "parameters" : {
+          "fontSize" : 16,
+          "text" : "Over the life of your loan...",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "text"
+      },
+      "inner_body_container" : {
+        "parameters" : {
+          "alignmentX" : "left",
+          "alignmentY" : "top",
+          "fit" : "fitheight",
+          "image" : {
+            "name" : "${App.Images['bg_main_mountain_jpg613111'].Name}",
+            "namespace" : "${Org.Namespace}"
+          }
+        },
+        "type" : "container"
+      },
+      "payment_schedule_link_2" : {
+        "parameters" : {
+          "destinationLink" : {
+            "name" : "87fa0f52-7055-46af-8455-7108748fee40"
+          },
+          "destinationType" : "page",
+          "fontSize" : 12,
+          "includeState" : false,
+          "text" : "PAYMENT SCHEDULE",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "link"
+      },
+      "payment_schedule_link_3" : {
+        "parameters" : {
+          "destinationLink" : {
+            "name" : "87fa0f52-7055-46af-8455-7108748fee40"
+          },
+          "destinationType" : "page",
+          "fontSize" : 12,
+          "includeState" : false,
+          "text" : "PAYMENT SCHEDULE",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "link"
+      },
+      "payment_schedule_link_1" : {
+        "parameters" : {
+          "destinationLink" : {
+            "name" : "87fa0f52-7055-46af-8455-7108748fee40"
+          },
+          "destinationType" : "page",
+          "fontSize" : 12,
+          "includeState" : false,
+          "text" : "PAYMENT SCHEDULE",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "link"
+      },
+      "extra_payment_info" : {
+        "parameters" : {
+          "fontSize" : 12,
+          "text" : "Based on our calculations, making an extra payment of 1% annually will reduce your overall total interest by $xxx,xxx.xx.",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "text"
+      },
+      "loan_life_chart_link_2" : {
+        "parameters" : {
+          "destinationLink" : {
+            "name" : "5c70ce1e-1bbc-4595-9e81-31f791c38a90"
+          },
+          "destinationType" : "page",
+          "fontSize" : 12,
+          "includeState" : false,
+          "text" : "CHARTED LOAN LIFE",
+          "textAlignment" : "left",
+          "textColor" : "#7D98B3"
+        },
+        "type" : "link"
+      },
+      "Amortization_Chart" : {
+        "parameters" : {
+          "autoFitMode" : "fit",
+          "showPoints" : true,
+          "legend" : {
+            "descOrder" : true,
+            "showHeader" : true,
+            "sorting" : {
+              "order" : "desc"
+            },
+            "show" : true,
+            "customSize" : "auto",
+            "position" : "right-top",
+            "inside" : false
+          },
+          "axisMode" : "sync",
+          "tooltip" : {
+            "showBinLabel" : true,
+            "measures" : "",
+            "showPercentage" : true,
+            "showDimensions" : true,
+            "showMeasures" : true,
+            "customizeTooltip" : false,
+            "dimensions" : ""
+          },
+          "visualizationType" : "${Variables.AmorizedChartType}",
+          "dashLine" : {
+            "measures" : "",
+            "showDashLine" : false
+          },
+          "exploreLink" : false,
+          "title" : {
+            "fontSize" : 14,
+            "subtitleFontSize" : 11,
+            "label" : "",
+            "align" : "center",
+            "subtitleLabel" : ""
+          },
+          "trellis" : {
+            "flipLabels" : false,
+            "showGridLines" : true,
+            "size" : [
+  100,
+  100
+  ],
+            "enable" : false,
+            "type" : "x",
+            "parameters" : { },
+            "chartsPerLine" : 4
+          },
+          "fillArea" : true,
+          "showZero" : true,
+          "measureAxis2" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "Payment Number",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "measureAxis1" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "Amount",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "valueType" : "none",
+          "theme" : "wave",
+          "step" : "Monthly_Payments",
+          "dimensionAxis" : {
+            "showTitle" : true,
+            "customSize" : "auto",
+            "showAxis" : true,
+            "title" : "",
+            "icons" : {
+              "useIcons" : false,
+              "iconProps" : {
+                "fit" : "cover",
+                "column" : "",
+                "type" : "round",
+                "parameters" : { }
+              }
+            }
+          },
+          "drawArea" : {
+            "measure" : "",
+            "showDrawArea" : false,
+            "bounding1" : "",
+            "bounding2" : ""
+          }
+        },
+        "type" : "chart"
+      },
+      "loan_life_chart_link_3" : {
+        "parameters" : {
+          "destinationLink" : {
+            "name" : "5c70ce1e-1bbc-4595-9e81-31f791c38a90"
+          },
+          "destinationType" : "page",
+          "fontSize" : 12,
+          "includeState" : false,
+          "text" : "CHARTED LOAN LIFE",
+          "textAlignment" : "left",
+          "textColor" : "#7D98B3"
+        },
+        "type" : "link"
+      },
+      "loan_life_chart_link_1" : {
+        "parameters" : {
+          "destinationLink" : {
+            "name" : "5c70ce1e-1bbc-4595-9e81-31f791c38a90"
+          },
+          "destinationType" : "page",
+          "fontSize" : 12,
+          "includeState" : false,
+          "text" : "CHARTED LOAN LIFE",
+          "textAlignment" : "left",
+          "textColor" : "#5C7A99"
+        },
+        "type" : "link"
+      },
+      "Amortization_Table" : {
+        "parameters" : {
+          "borderColor" : "#e0e5ee",
+          "borderWidth" : 1,
+          "cell" : {
+            "backgroundColor" : "#ffffff",
+            "fontColor" : "#16325c",
+            "fontSize" : 18
+          },
+          "columnProperties" : {
+            "Interest" : {
+              "parameters" : {
+                "alignment" : "right"
+              },
+              "type" : "text"
+            },
+            "PrincipalPayment" : {
+              "parameters" : {
+                "alignment" : "right"
+              },
+              "type" : "text"
+            },
+            "EndingPrincipal" : {
+              "parameters" : {
+                "alignment" : "right"
+              },
+              "type" : "text"
+            },
+            "PaymentNumber" : {
+              "parameters" : {
+                "alignment" : "right"
+              },
+              "type" : "text"
+            }
+          },
+          "columns" : [ ],
+          "customBulkActions" : [ ],
+          "evenRowColor" : "#F2F6FA",
+          "exploreLink" : false,
+          "header" : {
+            "backgroundColor" : "#C5D3E0",
+            "fontColor" : "#335779",
+            "fontSize" : 12
+          },
+          "innerMajorBorderColor" : "#a8b7c7",
+          "innerMinorBorderColor" : "#e0e5ee",
+          "maxColumnWidth" : 300,
+          "minColumnWidth" : 40,
+          "mode" : "variable",
+          "numberOfLines" : 1,
+          "step" : "Monthly_Payments",
+          "verticalPadding" : 8
+        },
+        "type" : "table"
+      }
+    }
+  }
+}

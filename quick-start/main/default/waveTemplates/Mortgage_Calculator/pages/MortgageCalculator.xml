@@ -1,0 +1,8 @@
+<apex:page >
+	<b>You made the upgrade! This dashboard is named '${App.Dashboards['Amortized Schedule'].Name}'.</b>
+	<br/>
+	<b>You financed your loan for ${Variables.LoanTermYears} years.</b>
+	<br/>
+    <wave:dashboard dashboardId="${App.Dashboards['Amortized Schedule'].Id}" showSharing="false" openLinksInNewWindow="false"
+                showTitle="false" showHeader="false" hideOnError="false" height="1000px"/>
+</apex:page>

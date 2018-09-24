@@ -1,0 +1,66 @@
+{
+  "macros" : [ 
+  	{
+  		"namespace": "mort_calc",
+  		"definitions": [
+			{  			
+				"name" : "constructAmortizedScheduleItem",
+	  			"description": "Generates a single payment payment object.",
+	  			"parameters": [
+	  				"PaymentNumber",
+	  				"MonthlyPayment",
+	  				"LoanAmount",  
+	  				"MPR",		  
+	  				"LoanTermsInMonths"
+				],
+				"actions":[
+ 			        {
+			          "action": "eval",
+			          "key": "PreviousValuePath",
+			          "value": "$.state.steps.Monthly_Payments.values[${p.PaymentNumber - 2}]"
+			        },
+ 			        {
+			          "action": "eval",
+			          "condition": "${p.PaymentNumber > 1}",
+			          "key": "PreviousValue",
+			          "value": "${array:last(json:searchValues(Rules.Eval.PreviousValuePath))}"
+			        },
+ 			        {
+			          "action": "eval",
+			          "key": "BeginningBalance",
+			          "value": "${p.PaymentNumber == 1 ? p.LoanAmount : Rules.Eval.PreviousValue['End Balance']}"
+			        },
+ 			        {
+			          "action": "eval",
+			          "key": "InterestPayment",
+			          "value": "${math:round(Rules.Eval.BeginningBalance * p.MPR, 2)}"
+			        },
+ 			        {
+			          "action": "eval",
+			          "key": "PrincipalPayment",
+			          "value": "${math:round((p.PaymentNumber == p.LoanTermsInMonths ? Rules.Eval.BeginningBalance : (p.MonthlyPayment - Rules.Eval.InterestPayment)), 2)}"
+			        },
+ 			        {
+			          "action": "eval",
+			          "key": "RemainingBalance",
+			          "value": "${math:round(Rules.Eval.BeginningBalance - Rules.Eval.PrincipalPayment, 2)}"
+			        },
+                    {
+	                    "action": "add",
+	                    "path": "$.state.steps.Monthly_Payments.values",
+	                    "value" : {
+							"Payment": "${''.concat(p.PaymentNumber)}",
+							"Interest": "${Rules.Eval.InterestPayment}",
+							"Principal": "${Rules.Eval.PrincipalPayment}",
+							"Total": "${math:round(Rules.Eval.InterestPayment + Rules.Eval.PrincipalPayment, 2)}",
+							"Beginning Balance": "${''.concat(Rules.Eval.BeginningBalance)}",
+							//"Monthly Payment": "${''.concat(p.MonthlyPayment)}",
+							"End Balance": "${''.concat(Rules.Eval.RemainingBalance)}"
+						} 
+                		}
+ 				]
+			}
+		]
+  	}
+  ]
+}

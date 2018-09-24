@@ -1,0 +1,327 @@
+{
+  "name" : "mort_calc_Amortized_Schedule_tp",
+  "label" : "Amortized Schedule",
+  "folder" : {
+    "id" : "${App.Folder.Id}"
+  },
+  "mobileDisabled" : false,
+  "state" : {
+    "dataSourceLinks" : [ ],
+    "filters" : [ ],
+    "gridLayouts" : [
+  {
+        "name" : "Default",
+        "numColumns" : 12,
+        "pages" : [
+  {
+            "label" : "Amortized Schedule",
+            "name" : "fcfd00d1-4b55-4bb0-8d30-7f35e2310b67",
+            "navigationHidden" : false,
+            "widgets" : [
+  {
+                "colspan" : 7,
+                "column" : 3,
+                "name" : "Amortization_Table",
+                "row" : 10,
+                "rowspan" : 12,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+  {
+                "colspan" : 12,
+                "column" : 0,
+                "name" : "Amortization_Chart",
+                "row" : 0,
+                "rowspan" : 10,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              }
+  ]
+          }
+  ],
+        "rowHeight" : "normal",
+        "selectors" : [ ],
+        "style" : {
+          "alignmentX" : "left",
+          "alignmentY" : "top",
+          "backgroundColor" : "#FFFFFF",
+          "cellSpacingX" : 8,
+          "cellSpacingY" : 8,
+          "fit" : "original",
+          "gutterColor" : "#C5D3E0"
+        },
+        "version" : 1.0
+      }
+  ],
+    "layouts" : [ ],
+    "steps" : {
+      "Monthly_Payments" : {
+        "broadcastFacet" : true,
+        "label" : "Monthly Payments",
+        "selectMode" : "single",
+        "type" : "staticflex",
+        "values" : [
+  {
+            "Payment" : "1",
+            "Interest" : 0.06,
+            "Principal" : 1.64,
+            "Total" : 1.7,
+            "Beginning Balance" : "20",
+            "End Balance" : "18.36"
+          },
+  {
+            "Payment" : "2",
+            "Interest" : 0.05,
+            "Principal" : 1.65,
+            "Total" : 1.7,
+            "Beginning Balance" : "18.36",
+            "End Balance" : "16.71"
+          },
+  {
+            "Payment" : "3",
+            "Interest" : 0.05,
+            "Principal" : 1.65,
+            "Total" : 1.7,
+            "Beginning Balance" : "16.71",
+            "End Balance" : "15.06"
+          },
+  {
+            "Payment" : "4",
+            "Interest" : 0.04,
+            "Principal" : 1.66,
+            "Total" : 1.7,
+            "Beginning Balance" : "15.06",
+            "End Balance" : "13.4"
+          },
+  {
+            "Payment" : "5",
+            "Interest" : 0.04,
+            "Principal" : 1.66,
+            "Total" : 1.7,
+            "Beginning Balance" : "13.4",
+            "End Balance" : "11.74"
+          },
+  {
+            "Payment" : "6",
+            "Interest" : 0.03,
+            "Principal" : 1.67,
+            "Total" : 1.7,
+            "Beginning Balance" : "11.74",
+            "End Balance" : "10.07"
+          },
+  {
+            "Payment" : "7",
+            "Interest" : 0.03,
+            "Principal" : 1.67,
+            "Total" : 1.7,
+            "Beginning Balance" : "10.07",
+            "End Balance" : "8.4"
+          },
+  {
+            "Payment" : "8",
+            "Interest" : 0.02,
+            "Principal" : 1.68,
+            "Total" : 1.7,
+            "Beginning Balance" : "8.4",
+            "End Balance" : "6.72"
+          },
+  {
+            "Payment" : "9",
+            "Interest" : 0.02,
+            "Principal" : 1.68,
+            "Total" : 1.7,
+            "Beginning Balance" : "6.72",
+            "End Balance" : "5.04"
+          },
+  {
+            "Payment" : "10",
+            "Interest" : 0.01,
+            "Principal" : 1.69,
+            "Total" : 1.7,
+            "Beginning Balance" : "5.04",
+            "End Balance" : "3.35"
+          },
+  {
+            "Payment" : "11",
+            "Interest" : 0.01,
+            "Principal" : 1.69,
+            "Total" : 1.7,
+            "Beginning Balance" : "3.35",
+            "End Balance" : "1.66"
+          },
+  {
+            "Payment" : "12",
+            "Interest" : 0.0,
+            "Principal" : 1.66,
+            "Total" : 1.66,
+            "Beginning Balance" : "1.66",
+            "End Balance" : "0.0"
+          }
+  ]
+      }
+    },
+    "widgetStyle" : {
+      "backgroundColor" : "#FFFFFF",
+      "borderColor" : "#E6ECF2",
+      "borderEdges" : [ ],
+      "borderRadius" : 0,
+      "borderWidth" : 1
+    },
+    "widgets" : {
+      "Amortization_Chart" : {
+        "parameters" : {
+          "autoFitMode" : "fit",
+          "showPoints" : true,
+          "legend" : {
+            "descOrder" : true,
+            "showHeader" : true,
+            "sorting" : {
+              "order" : "desc"
+            },
+            "show" : true,
+            "customSize" : "auto",
+            "position" : "right-top",
+            "inside" : false
+          },
+          "axisMode" : "sync",
+          "tooltip" : {
+            "showBinLabel" : true,
+            "measures" : "",
+            "showPercentage" : true,
+            "showDimensions" : true,
+            "showMeasures" : true,
+            "customizeTooltip" : false,
+            "dimensions" : ""
+          },
+          "visualizationType" : "line",
+          "dashLine" : {
+            "measures" : "",
+            "showDashLine" : false
+          },
+          "exploreLink" : false,
+          "title" : {
+            "fontSize" : 14,
+            "subtitleFontSize" : 11,
+            "label" : "",
+            "align" : "center",
+            "subtitleLabel" : ""
+          },
+          "trellis" : {
+            "flipLabels" : false,
+            "showGridLines" : true,
+            "size" : [
+  100,
+  100
+  ],
+            "enable" : false,
+            "type" : "x",
+            "parameters" : { },
+            "chartsPerLine" : 4
+          },
+          "fillArea" : true,
+          "showZero" : true,
+          "measureAxis2" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "Payment Number",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "measureAxis1" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "Amount",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "valueType" : "none",
+          "theme" : "wave",
+          "step" : "Monthly_Payments",
+          "dimensionAxis" : {
+            "showTitle" : true,
+            "customSize" : "auto",
+            "showAxis" : true,
+            "title" : "",
+            "icons" : {
+              "useIcons" : false,
+              "iconProps" : {
+                "fit" : "cover",
+                "column" : "",
+                "type" : "round",
+                "parameters" : { }
+              }
+            }
+          },
+          "drawArea" : {
+            "measure" : "",
+            "showDrawArea" : false,
+            "bounding1" : "",
+            "bounding2" : ""
+          }
+        },
+        "type" : "chart"
+      },
+      "Amortization_Table" : {
+        "parameters" : {
+          "borderColor" : "#e0e5ee",
+          "borderWidth" : 1,
+          "cell" : {
+            "backgroundColor" : "#ffffff",
+            "fontColor" : "#16325c",
+            "fontSize" : 18
+          },
+          "columnProperties" : {
+            "Interest" : {
+              "parameters" : {
+                "alignment" : "right"
+              },
+              "type" : "text"
+            },
+            "PrincipalPayment" : {
+              "parameters" : {
+                "alignment" : "right"
+              },
+              "type" : "text"
+            },
+            "EndingPrincipal" : {
+              "parameters" : {
+                "alignment" : "right"
+              },
+              "type" : "text"
+            },
+            "PaymentNumber" : {
+              "parameters" : {
+                "alignment" : "right"
+              },
+              "type" : "text"
+            }
+          },
+          "columns" : [ ],
+          "customBulkActions" : [ ],
+          "evenRowColor" : "#f0f6ea",
+          "exploreLink" : false,
+          "header" : {
+            "backgroundColor" : "#6dab26",
+            "fontColor" : "#ffffff",
+            "fontSize" : 12
+          },
+          "innerMajorBorderColor" : "#a8b7c7",
+          "innerMinorBorderColor" : "#e0e5ee",
+          "maxColumnWidth" : 300,
+          "minColumnWidth" : 40,
+          "mode" : "variable",
+          "numberOfLines" : 1,
+          "step" : "Monthly_Payments",
+          "verticalPadding" : 8
+        },
+        "type" : "table"
+      }
+    }
+  }
+}

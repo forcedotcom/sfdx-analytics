@@ -1,0 +1,18 @@
+{
+  "pages": [
+    {
+      "title": "Mortgage Calculator Loan Information",
+      "variables": [
+        {
+          "name": "FinancingAmount"
+        },
+        {
+          "name": "LoanTermYears"
+        },
+        {
+          "name": "AnnualPercentageRate"
+        }
+      ]
+    }
+  ]
+}
