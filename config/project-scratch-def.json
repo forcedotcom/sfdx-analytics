@@ -4,8 +4,9 @@
   "adminEmail": "%email_address%",
   "edition": "Developer",
   "features": ["DevelopmentWave"],
-  "orgPreferences": {
-    "enabled": ["S1DesktopEnabled"],
-    "disabled": []
+  "settings": {
+    "orgPreferenceSettings": {
+        "s1DesktopEnabled": true
+    }
   }
 }
