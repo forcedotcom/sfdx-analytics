@@ -63,28 +63,37 @@
             ]
           }
         },
-        { 
-        		"action": "eval", 
-        		"value": "${array:forEachIndex(1,Variables.LoanTermYears*12, '${mort_calc:constructAmortizedScheduleItem(index, Rules.Eval.MonthlyPayment, Variables.FinancingAmount, Rules.Eval.MPR, Rules.Eval.LoanTermsInMonths)}')}"
-    		},
         {
-            "action": "put",
-            "path": "$.state.steps.Monthly_Payments",
-            "key": "strings",
-            "value" : ["Payment","Balance"] 
-    		},
+          "action": "eval",
+          "value": "${array:forEachIndex(1,Variables.LoanTermYears*12, '${mort_calc:constructAmortizedScheduleItem(index, Rules.Eval.MonthlyPayment, Variables.FinancingAmount, Rules.Eval.MPR, Rules.Eval.LoanTermsInMonths)}')}"
+        },
         {
-            "action": "put",
-            "path": "$.state.steps.Monthly_Payments",
-            "key": "numbers",
-            "value" : ["Interest","Principal", "Total"] 
-    		},
+          "action": "put",
+          "path": "$.state.steps.Monthly_Payments",
+          "key": "strings",
+          "value": [
+            "Payment",
+            "Balance"
+          ]
+        },
         {
-            "action": "put",
-            "path": "$.state.steps.Monthly_Payments",
-            "key": "groups",
-            "value" : ["Payment"] 
-    		}
+          "action": "put",
+          "path": "$.state.steps.Monthly_Payments",
+          "key": "numbers",
+          "value": [
+            "Interest",
+            "Principal",
+            "Total"
+          ]
+        },
+        {
+          "action": "put",
+          "path": "$.state.steps.Monthly_Payments",
+          "key": "groups",
+          "value": [
+            "Payment"
+          ]
+        }
       ]
     }
   ]
