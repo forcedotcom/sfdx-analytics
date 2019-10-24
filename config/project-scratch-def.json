@@ -1,12 +1,5 @@
 {
   "orgName": "Analytics App Scratch Org",
-  "country": "US",
-  "adminEmail": "%email_address%",
   "edition": "Developer",
-  "features": ["DevelopmentWave"],
-  "settings": {
-    "orgPreferenceSettings": {
-        "s1DesktopEnabled": true
-    }
-  }
+  "features": ["DevelopmentWave"]
 }
