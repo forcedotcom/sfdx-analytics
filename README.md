@@ -18,20 +18,27 @@ For example to create an Analytics template from an application run the followin
 'sfdx analytics:app:create --help'
 
 To view the Analytics template:
+
 'sfdx analytics:template:list'
 
 To create an Analytics application from the template you have two options:
 
 From CLI:
+
 'sfdx analytics:app:create -t <templateid>'
 
-Or open the org and create it from Analytics Studio
--- Onetime: set environment variable so you always open to Analytics Page
-export FORCE_OPEN_URL=/analytics/wave/wave.apexp
--- Open the scratch org
-sfdx force:org:open
--- Select 'Create' > 'App' > 'Start From Template'
+From Analytics Studio
 
+> Onetime: set environment variable so you always open to Analytics Page
+
+export FORCE_OPEN_URL=/analytics/wave/wave.apexp
+
+> Open the scratch org
+
+sfdx force:org:open
+
+> Select 'Create' > 'App' > 'Start From Template'
 
 To to view the Analytics applications from the CLI:
+
 'sfdx analytics:app:list' 
