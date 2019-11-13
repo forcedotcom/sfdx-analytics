@@ -1,0 +1,8 @@
+{
+  "label": "Learning Adventure",
+  "description": "Example description for app create, templateSourceId can be a template id starting with 0Nk, or the dev name of an internal template.",
+  "assetIcon": "16.png",
+  "templateSourceId": "sfdc_internal__Learning_Adventure",
+  "templateValues": {},
+  "name": "learning adventure application"
+}
