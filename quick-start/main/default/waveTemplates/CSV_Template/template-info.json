@@ -1,59 +1,58 @@
 {
-  "templateType" : "app",
-  "label" : "CSV Template",
-  "name" : "CSV_Template",
-  "description" : "",
-  "assetVersion" : 47.0,
-  "variableDefinition" : "variables.json",
-  "uiDefinition" : "ui.json",
-  "rules" : [
+  "templateType": "app",
+  "label": "CSV Template",
+  "name": "CSV_Template",
+  "description": "",
+  "assetVersion": 47.0,
+  "variableDefinition": "variables.json",
+  "uiDefinition": "ui.json",
+  "rules": [
     {
-      "type" : "templateToApp",
-      "file" : "template-to-app-rules.json"
+      "type": "templateToApp",
+      "file": "template-to-app-rules.json"
     },
     {
-      "type" : "appToTemplate",
-      "file" : "app-to-template-rules.json"
+      "type": "appToTemplate",
+      "file": "app-to-template-rules.json"
     }
   ],
-  "releaseInfo" : {
-    "templateVersion" : "1.0",
-    "notesFile" : "releaseNotes.html"
+  "releaseInfo": {
+    "templateVersion": "1.0",
+    "notesFile": "releaseNotes.html"
   },
-  "folderDefinition" : "folder.json",
-  "externalFiles" : [
+  "folderDefinition": "folder.json",
+  "externalFiles": [
     {
-      "label" : "ABCWidgetSales2017",
-      "name" : "ABCWidgetSales2017",
-      "condition" : "${Variables.Overrides.createAllExternalFiles}",
-      "file" : "external_files/ABCWidgetSales2017.csv",
-      "type" : "CSV",
-      "schema" : "external_files/ABCWidgetSales2017.json",
-      "userXmd" : "external_files/ABCWidgetSales2017_XMD.json"
+      "label": "ABCWidgetSales2017",
+      "name": "ABCWidgetSales2017",
+      "condition": "${Variables.Overrides.createAllExternalFiles}",
+      "file": "external_files/ABCWidgetSales2017.csv",
+      "type": "CSV",
+      "schema": "external_files/ABCWidgetSales2017.json",
+      "userXmd": "external_files/ABCWidgetSales2017_XMD.json"
     }
   ],
-  "lenses" : [ ],
-  "dashboards" : [
+  "lenses": [],
+  "dashboards": [
     {
-      "label" : "Table Grid Expansion Template",
-      "name" : "Table_Grid_Expansion_Template1_tp",
-      "condition" : "${Variables.Overrides.createAllDashboards}",
-      "file" : "dashboards/Table_Grid_Expansion_Template1.json"
+      "label": "Table Grid Expansion Template",
+      "name": "Table_Grid_Expansion_Template1_tp",
+      "condition": "${Variables.Overrides.createAllDashboards}",
+      "file": "dashboards/Table_Grid_Expansion_Template1.json"
     }
   ],
-  "eltDataflows" : [ ],
-  "datasetFiles" : [ ],
-  "storedQueries" : [ ],
-  "imageFiles" : [ ],
-  "extendedTypes" : { },
-  "templateDependencies" : [ ],
-  "icons" : {
-    "appBadge" : {
-      "name" : "16.png"
+  "eltDataflows": [],
+  "datasetFiles": [],
+  "imageFiles": [],
+  "extendedTypes": {},
+  "templateDependencies": [],
+  "icons": {
+    "appBadge": {
+      "name": "16.png"
     },
-    "templateBadge" : {
-      "name" : "default.png"
+    "templateBadge": {
+      "name": "default.png"
     },
-    "templatePreviews" : [ ]
+    "templatePreviews": []
   }
 }

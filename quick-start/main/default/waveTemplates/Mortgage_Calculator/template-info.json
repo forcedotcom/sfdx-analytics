@@ -36,7 +36,6 @@
   ],
   "eltDataflows": [],
   "datasetFiles": [],
-  "storedQueries": [],
   "imageFiles": [
     {
       "name": "info_icon_png613111",
@@ -55,7 +54,6 @@
     },
     "templateBadge": {
       "name": "default.png"
-    },
-    "templateDetail": {}
+    }
   }
 }
