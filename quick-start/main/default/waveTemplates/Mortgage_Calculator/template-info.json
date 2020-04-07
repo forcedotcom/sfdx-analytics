@@ -54,6 +54,19 @@
     },
     "templateBadge": {
       "name": "default.png"
-    }
+    },
+    "templatePreviews": [
+      {
+        "name": "morty_preview",
+        "label": "Mortgage Calculator",
+        "description": "Calculate your mortgage payment based on amount, APR and number of years.  See how your ammortization behaves over time."
+      },
+      {
+        "name": "morty_macros",
+        "label": "Macros By Example",
+        "description": "Test your rule skills by building sophisticated macros to reduce the amount of repetitive code."
+      }
+    ]
+ 
   }
 }
