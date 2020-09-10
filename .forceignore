@@ -13,3 +13,4 @@ package.xml
 
 # Ignore Wave stuff that is not part of templates
 quick-start/main/default/wave/*
+quick-start/main/default/waveRecipe/*
