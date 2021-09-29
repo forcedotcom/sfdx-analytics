@@ -22,17 +22,13 @@ For App Templates, there is Quick Start project to get users using the power of 
 
 -   [Installing the app using a Scratch Org](#installing-the-app-using-a-scratch-org): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
 
--   [Installing the app using a Developer Edition Org or a Trailhead Playground](#installing-the-app-using-a-developer-edition-org-or-a-trailhead-playground): Useful when tackling Trailhead Badges or if you want the app deployed to a more permanent environment than a Scratch org.
-
--   [Optional installation instructions](#optional-installation-instructions)
-
--   [Code tours](#code-tours)
-
 -   [Tableau CRM LWC Features](#tableau-crm-lwc-features)
 
 -   [Tableau CRM LWC Metadata](#tableau-crm-lwc-metadata)
 
 -   [Tableau CRM App Templates](#tableau-crm-app-templates)
+
+-   [Tableau CRM App Template Commands](#tableau-crm-app-template-commands)
 
 ## Installing the app using a Scratch Org
 
@@ -49,17 +45,17 @@ For App Templates, there is Quick Start project to get users using the power of 
     sfdx auth:web:login -d -a myhuborg
     ```
 
-1. Clone the ****<NEED OUR PUBLIC REPO HERE>** repository:
+1. Clone the forcedotcom/sfdx-analytics repository:
 
     ```
-    git clone **<NEED OUR PUBLIC REPO HERE>**
-    cd **<NEED OUR PUBLIC REPO HERE>**
+    git clone https://github.com/forcedotcom/sfdx-analytics.git
+    cd sfdx-analytics
     ```
 
-1. Create a scratch org and provide it with an alias (**<NEED OUR PUBLIC REPO HERE>s** in the command below):
+1. Create a scratch org and provide it with an alias (sfdx-analytics in the command below):
 
     ```
-    sfdx force:org:create -s -f config/project-scratch-def.json -a **<NEED OUR PUBLIC REPO HERE>**
+    sfdx force:org:create -s -f config/project-scratch-def.json -a sfdx-analytics
     ```
 
 1. Push the app to your scratch org:
@@ -73,95 +69,6 @@ For App Templates, there is Quick Start project to get users using the power of 
     ```
     sfdx force:org:open
     ```
-
-1. In App Launcher, click **View All** then select the **<NEED OUR APP>** app.
-
-## Installing the App using a Developer Edition Org or a Trailhead Playground
-
-Follow this set of instructions if you want to deploy the app to a more permanent environment than a Scratch org.
-This includes non source-tracked orgs such as a [free Developer Edition Org](https://developer.salesforce.com/signup) or a [Trailhead Playground](https://trailhead.salesforce.com/).
-
-Make sure to start from a brand-new environment to avoid conflicts with previous work you may have done.
-
-1. Clone this repository:
-
-    ```
-    git clone **<NEED OUR PUBLIC REPO HERE>**
-    cd **<NEED OUR PUBLIC REPO HERE>**
-    ```
-
-1. Authorize your Trailhead Playground or Developer org and provide it with an alias (**mydevorg** in the command below):
-
-    ```
-    sfdx auth:web:login -s -a mydevorg
-    ```
-
-1. Run this command in a terminal to deploy the app.
-
-    ```
-    sfdx force:source:deploy -p force-app
-    ```
-
-1. Assign the `recipes` permission set to the default user. **<DO WE NEED THIS IN OUR REPO???>**
-
-    ```
-    sfdx force:user:permset:assign -n recipes
-    ```
-
-1. (Optional) Assign the `Walkthroughs` permission set to the default user. **<DO WE NEED THIS IN OUR REPO???>**
-
-> Note: this will enable In App Guidance Walkthroughs, allowing you to be taken through a guided tour of the sample app.
-
-    ```
-    sfdx force:user:permset:assign -n Walkthroughs
-    ```
-
-1. Import some sample data. **<DO WE NEED THIS IN OUR REPO???>**
-
-    ```
-    sfdx force:data:tree:import -p ./data/data-plan.json
-    ```
-
-1. If your org isn't already open, open it now:
-
-    ```
-    sfdx force:org:open -u mydevorg
-    ```
-
-
-1. In App Launcher, select the **<NEED OUR PUBLIC REPO HERE>** app.
-
-## Optional Installation Instructions **<DO WE NEED THIS IN OUR REPO???>**
-
-This repository contains several files that are relevant if you want to integrate modern web development tooling to your Salesforce development processes, or to your continuous integration/continuous deployment processes.
-
-### Code formatting
-
-[Prettier](https://prettier.io/) is a code formatter used to ensure consistent formatting across your code base. To use Prettier with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) from the Visual Studio Code Marketplace. The [.prettierignore](/.prettierignore) and [.prettierrc](/.prettierrc) files are provided as part of this repository to control the behavior of the Prettier formatter.
-
-### Code linting
-
-[ESLint](https://eslint.org/) is a popular JavaScript linting tool used to identify stylistic errors and erroneous constructs. To use ESLint with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-lwc) from the Visual Studio Code Marketplace. The [.eslintignore](/.eslintignore) file is provided as part of this repository to exclude specific files from the linting process in the context of Lightning Web Components development.
-
-### Pre-commit hook
-
-This repository also comes with a [package.json](./package.json) file that makes it easy to set up a pre-commit hook that enforces code formatting and linting by running Prettier and ESLint every time you `git commit` changes.
-
-To set up the formatting and linting pre-commit hook:
-
-1. Install [Node.js](https://nodejs.org) if you haven't already done so
-1. Run `npm install` in your project's root folder to install the ESLint and Prettier modules (Note: Mac users should verify that Xcode command line tools are installed before running this command.)
-
-Prettier and ESLint will now run automatically every time you commit changes. The commit will fail if linting errors are detected. You can also run the formatting and linting from the command line using the following commands (check out [package.json](./package.json) for the full list):
-
-```
-npm run lint:lwc
-npm run prettier
-```
-
-## Code Tours **<DO WE NEED THIS IN OUR REPO??? THIS ONE WOULD BE EXTRA WORK>**
-
-Code Tours are guided walkthroughs that will help you understand the app code better. To be able to run them, install the [CodeTour VSCode extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour).
 
 ## Tableau CRM LWC Features
 
