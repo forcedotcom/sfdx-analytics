@@ -4,9 +4,9 @@
 
 A collection of Tableau CRM code examples for Lightning Web Components (LWC) and App Templates. 
 
-For LWC, each example demonstrates how to code third party Analytics visualizations into LWC. Current examples include a Gantt Chart, a graph, a hierarchy, a list, and an integration with the [Chart.js library](https://www.chartjs.org/).
+For LWC, each example demonstrates how to code third party Analytics visualizations into LWC. Current examples include a Gantt Chart, a graph, a hierarchy, a list, and an integration with the [Chart.js library](https://www.chartjs.org/). For additional infomation, see the [Lightning Web Components in Tableau CRM Dashboards (Beta)](https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_lwc_in_db.meta/bi_dev_guide_lwc_in_db/bi_lwc_in_db_overview.htm) developer guide.
 
-For App Templates, there is Quick Start project to get users using the power of SFDX to develop Analytics templates.
+For App Templates, there is Quick Start project to get users using the power of SFDX to develop Analytics templates. For additional information on template creation and deep-dive details, see the [Tableau CRM Templates Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_wave_templates.meta/bi_dev_guide_wave_templates/bi_templatesdev_intro_wave_templates.htm).
 
 <div>
     <img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70,w_50/learn/projects/quick-start-lwc-recipes-app/bb501c3216ac163958f036fb90357955_badge.png" align="left" alt="Trailhead Badge"/>
@@ -16,7 +16,7 @@ For App Templates, there is Quick Start project to get users using the power of 
     <br/>
 </div>
 
-> This sample application is designed to run on Salesforce Platform.
+> These samples are designed to run on Salesforce Platform.
 
 ## Table of contents
 
