@@ -98,6 +98,7 @@ type State = {|
 type GetState = () => State,
 type SetState = (State) => void;
 ```
+For more information on `type` syntax, see [Type Annotations](https://flow.org/en/docs/types/).
 
 **Data**
 
@@ -115,17 +116,18 @@ Metadata describes the shape of the results.
 ```
 {
     strings: ['columnOne'],
-    numbers: ['columnTwo']
+    numbers: ['columnTwo'],
+    groups: []
 }
 ```
 
 **Selection**
 
-Selection takes the same shape as data includes the currently-selected rows.
+`selection` is the current selection of the associated step as an Array of objects, with each object being one or more selected rows from the results.
 
 **setSelelction**
 
-`setSelection` is a callback passed in that allows the component to update the attached step's selection in Tableau CRM. In doing so, it potentially applies filters to the rest of the dashboard's contents depending on how the widges are configured.
+`setSelection` is a callback passed in that allows the component to update the attached step's selection in Tableau CRM. In doing so, it potentially applies filters to the rest of the dashboard's contents depending on how the widgets are configured.
 ```type SetSelection = (Selection) => void;```
 
 **Select Mode**
@@ -217,7 +219,7 @@ Navigate to the sfdx-analytics directory in a terminal:
 
         1. Onetime: set environment variable so you always open to Analytics Page
             ```
-            export FORCE_OPEN_URL=/analytics/wave/wave.apexp
+            export FORCE_OPEN_URL=/analytics/home
             ```
 
         1. Open the scratch org
