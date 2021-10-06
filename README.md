@@ -124,7 +124,8 @@ For more information on `type` syntax, see [Type Annotations](https://flow.org/e
 
 **Data**
 
-Available when a component has `<hasStep>true</hasStep>`, `data` returns the query results returned by the step as an array of maps. 
+Available when a component has `<hasStep>true</hasStep>`, `data` returns the query results of the step as an array of maps. 
+
     ```
     [
         {columnOne: 'one', columnTwo: 123},
@@ -135,6 +136,7 @@ Available when a component has `<hasStep>true</hasStep>`, `data` returns the que
 **Metadata**
 
 Available when a component has `<hasStep>true</hasStep>`, `metadata` describes the shape of the step results.
+
     ```
     {
         strings: ['columnOne'],
@@ -146,6 +148,7 @@ Available when a component has `<hasStep>true</hasStep>`, `metadata` describes t
 **Selection**
 
 Available when a component has `<hasStep>true</hasStep>`, `selection` is the current selection of the associated step as an Array of objects, with each object being one or more selected rows from the results.
+
     ```
     return new Map((this.selection ?? []).map((row) => [this.hash(row), row]);
     ```
@@ -153,13 +156,15 @@ Available when a component has `<hasStep>true</hasStep>`, `selection` is the cur
 **setSelelction**
 
 Available when a component has `<hasStep>true</hasStep>`, `setSelection` is a callback passed in that allows the component to update the attached step's selection in Tableau CRM. In doing so, it potentially applies filters to the rest of the dashboard's contents depending on how the widgets are configured.
+
     ```
     this.setSelection(this.isMultiSelect() ? [...selecedRowsByHash.values(), row] : [row]);
     ```
 
 **Select Mode**
 
-Available when a component has `<hasStep>true</hasStep>`, `selectMode` describes which select mode the results from step are in. Possible values are `single`, `multi`, `singlerequired`, `multirequired`, and `none`.
+Available when a component has `<hasStep>true</hasStep>`, `selectMode` describes which select mode the results from the step are in. Possible values are `single`, `multi`, `singlerequired`, `multirequired`, and `none`.
+
     ```
     isMultiSelect() { return this.selectMode.includes('multi'); }
     ```
@@ -171,11 +176,13 @@ Always available to the component, `getState` is used to retrieve the current st
 **setState**
 
 Always available to the component, `setState` is used to patch the current state of the dashboard.
+
     ```
     if (!this.getState().pageId == this.targetPage) {
         this.priorPage = this.getState().pageId;
         this.setState({...this.getState(), pageId : this.targetPage});
     }
+    ```
 
 ## Tableau CRM App Templates
 
@@ -183,10 +190,7 @@ Use the Quick Start template to practice working with Tableau CRM app templates 
 your own apps and templatize them using the Analytics CLI plugin and Visual Studio commands.
 
 1. Now you have a scratch org with an Analytics template installed.  Explore the Analytics commands by running
-    ```
-    sfdx analytics --help
-    ```
-or open the Visual Studio command palette and search for available `SFDX` commands
+`sfdx analytics --help`or open the Visual Studio command palette and search for available `SFDX` commands.
 
 1. View the options available to create an Analytics template from an app
     ```
