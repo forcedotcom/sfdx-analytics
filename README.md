@@ -97,7 +97,7 @@ Attributes specified in a LWC's `analtyicsDashboard` target config are displayed
 
 Each component configured for the `analytics__Dashboard` target has properties that are set by the dashboard runtime dynamically. Here are the properties by `type`:
 
-    `type Row = {[string]: mixed, ...};
+    type Row = {[string]: mixed, ...};
     type Data = Array<Row>;
     type Metadata = {|
         groups: Array<string>,
@@ -118,7 +118,7 @@ Each component configured for the `analytics__Dashboard` target has properties t
         state: DashboardStateJson
     |};
     type GetState = () => State,
-    type SetState = (State) => void;`
+    type SetState = (State) => void;
 
 For more information on `type` syntax, see [Type Annotations](https://flow.org/en/docs/types/).
 
@@ -126,38 +126,38 @@ For more information on `type` syntax, see [Type Annotations](https://flow.org/e
 
 Available when a component has `<hasStep>true</hasStep>`, `data` returns the query results of the step as an array of maps. 
 
-    `[
+    [
         {columnOne: 'one', columnTwo: 123},
         {columnOne: 'two', columnTwo: 456}
-    ]`
+    ]
 
 **Metadata**
 
 Available when a component has `<hasStep>true</hasStep>`, `metadata` describes the shape of the step results.
 
-    `{
+    {
         strings: ['columnOne'],
         numbers: ['columnTwo'],
         groups: []
-    }`
+    }
 
 **Selection**
 
 Available when a component has `<hasStep>true</hasStep>`, `selection` is the current selection of the associated step as an Array of objects, with each object being one or more selected rows from the results.
 
-    `return new Map((this.selection ?? []).map((row) => [this.hash(row), row]);`
+    return new Map((this.selection ?? []).map((row) => [this.hash(row), row]);
 
 **setSelelction**
 
 Available when a component has `<hasStep>true</hasStep>`, `setSelection` is a callback passed in that allows the component to update the attached step's selection in Tableau CRM. In doing so, it potentially applies filters to the rest of the dashboard's contents depending on how the widgets are configured.
 
-    `this.setSelection(this.isMultiSelect() ? [...selecedRowsByHash.values(), row] : [row]);`
+    this.setSelection(this.isMultiSelect() ? [...selecedRowsByHash.values(), row] : [row]);
 
 **Select Mode**
 
 Available when a component has `<hasStep>true</hasStep>`, `selectMode` describes which select mode the results from the step are in. Possible values are `single`, `multi`, `singlerequired`, `multirequired`, and `none`.
 
-    `isMultiSelect() { return this.selectMode.includes('multi'); }`
+    isMultiSelect() { return this.selectMode.includes('multi'); }
 
 **getState**
 
@@ -167,10 +167,10 @@ Always available to the component, `getState` is used to retrieve the current st
 
 Always available to the component, `setState` is used to patch the current state of the dashboard.
 
-    `if (!this.getState().pageId == this.targetPage) {
+    if (!this.getState().pageId == this.targetPage) {
         this.priorPage = this.getState().pageId;
         this.setState({...this.getState(), pageId : this.targetPage});
-    }`
+    }
 
 
 ## Tableau CRM App Templates
