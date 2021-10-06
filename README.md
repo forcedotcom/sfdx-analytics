@@ -22,13 +22,11 @@ For App Templates, there is Quick Start project to get users using the power of 
 
 -   [Installing the app using a Scratch Org](#installing-the-app-using-a-scratch-org): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
 
--   [Tableau CRM LWC Features](#tableau-crm-lwc-features)
-
 -   [Tableau CRM LWC Metadata](#tableau-crm-lwc-metadata)
 
--   [Tableau CRM App Templates](#tableau-crm-app-templates)
+-   [Tableau CRM LWC Features](#tableau-crm-lwc-features)
 
--   [Tableau CRM App Template Commands](#tableau-crm-app-template-commands)
+-   [Tableau CRM App Templates](#tableau-crm-app-templates)
 
 ## Installing the app using a Scratch Org
 
@@ -36,8 +34,9 @@ For App Templates, there is Quick Start project to get users using the power of 
 
     - Enable Dev Hub in your Trailhead Playground
     - Install Salesforce CLI
+    - Install the Analytics Plugin for the Salesforce CLI
     - Install Visual Studio Code
-    - Install the Visual Studio Code Salesforce extensions, including the Lightning Web Components extension
+    - Install the Visual Studio Code Salesforce extensions, including the Lightning Web Components ansd Salesforce Analytics - App Templates extensions.
 
 1. If you haven't already done so, authorize your hub org and provide it with an alias (**myhuborg** in the command below):
 
@@ -52,95 +51,29 @@ For App Templates, there is Quick Start project to get users using the power of 
     cd sfdx-analytics
     ```
 
+1. Install the Analytics SFDX plugin
+    ```
+    sfdx plugins:install @salesforce/analytics
+    ```
+
 1. Create a scratch org and provide it with an alias (sfdx-analytics in the command below):
 
     ```
     sfdx force:org:create -s -f config/project-scratch-def.json -a sfdx-analytics
     ```
 
-1. Push the app to your scratch org:
+1. Push the LWC and template sampleas to your scratch org:
 
     ```
     sfdx force:source:push
     ```
 
-1. Open the scratch org:
+1. Update the adminEmail in config/project-scratch-def.json to your email address and open your sc
 
     ```
-    sfdx force:org:open
+    sfdx force:org:open -u mydevorg
     ```
 
-## Tableau CRM LWC Features
-
-**Types**
-
-```
-type Row = {[string]: mixed, ...};
-type Data = Array<Row>;
-type Metadata = {|
-    groups: Array<string>,
-    strings: Array<string>,
-    numbers: Array<string>
-|};
-type Selection = Data;
-type SetSelection = (Selection) => void;
-type SelectMode = 
-    | 'none'
-    | 'single'
-    | 'multi'
-    | 'singlerequired'
-    | 'multirequired';
-
-type State = {|
-    pageId: string,
-    state: DashboardStateJson
-|};
-type GetState = () => State,
-type SetState = (State) => void;
-```
-For more information on `type` syntax, see [Type Annotations](https://flow.org/en/docs/types/).
-
-**Data**
-
-Data is the result rows returned by the query as an array of maps.
-```
-[
-    {columnOne: 'one', columnTwo: 123},
-    {columnOne: 'two', columnTwo: 456}
-]
-```
-
-**Metadata**
-
-Metadata describes the shape of the results.
-```
-{
-    strings: ['columnOne'],
-    numbers: ['columnTwo'],
-    groups: []
-}
-```
-
-**Selection**
-
-`selection` is the current selection of the associated step as an Array of objects, with each object being one or more selected rows from the results.
-
-**setSelelction**
-
-`setSelection` is a callback passed in that allows the component to update the attached step's selection in Tableau CRM. In doing so, it potentially applies filters to the rest of the dashboard's contents depending on how the widgets are configured.
-```type SetSelection = (Selection) => void;```
-
-**Select Mode**
-
-Select mode describes which select mode the data source is in.
-
-**getState**
-
-`getState` is used to retrieve the current state of the dashboard. The state format is documented [here](https://help.salesforce.com/articleView?id=sf.bi_embed_filters.htm&type=5).
-
-**setState**
-
-`setState` is used to patch the current state of the dashboard.
 
 ## Tableau CRM LWC Metadata
 
@@ -158,49 +91,110 @@ In an `analyticsDashboard` target config, you can choose to include a `<hasStep>
 
 Attributes specified in a LWC's `analtyicsDashboard` target config are displayed in the Tableau CRM dashboard builder UI for configuration. In addition to the common data types, this target also supports `Measure` and `Dimension` data types for components with `<hasStep>true</hasStep>`. Dashboard builders are able to choose a column of the given data type from the results of the attached step.
 
+## Tableau CRM LWC Features
+
+**Types**
+Each component configured for the `analytics__Dashboard` target has properties that are set by the dashboard runtime dynamically. Here are the properties by `type`:
+
+    ```
+    type Row = {[string]: mixed, ...};
+    type Data = Array<Row>;
+    type Metadata = {|
+        groups: Array<string>,
+        strings: Array<string>,
+        numbers: Array<string>
+    |};
+    type Selection = Data;
+    type SetSelection = (Selection) => void;
+    type SelectMode = 
+        | 'none'
+        | 'single'
+        | 'multi'
+        | 'singlerequired'
+        | 'multirequired';
+
+    type State = {|
+        pageId: string,
+        state: DashboardStateJson
+    |};
+    type GetState = () => State,
+    type SetState = (State) => void;
+    ```
+For more information on `type` syntax, see [Type Annotations](https://flow.org/en/docs/types/).
+
+**Data**
+
+Available when a component has `<hasStep>true</hasStep>`, `data` returns the query results returned by the step as an array of maps. 
+    ```
+    [
+        {columnOne: 'one', columnTwo: 123},
+        {columnOne: 'two', columnTwo: 456}
+    ]
+    ```
+
+**Metadata**
+
+Available when a component has `<hasStep>true</hasStep>`, `metadata` describes the shape of the step results.
+    ```
+    {
+        strings: ['columnOne'],
+        numbers: ['columnTwo'],
+        groups: []
+    }
+    ```
+
+**Selection**
+
+Available when a component has `<hasStep>true</hasStep>`, `selection` is the current selection of the associated step as an Array of objects, with each object being one or more selected rows from the results.
+    ```
+    return new Map((this.selection ?? []).map((row) => [this.hash(row), row]);
+    ```
+
+**setSelelction**
+
+Available when a component has `<hasStep>true</hasStep>`, `setSelection` is a callback passed in that allows the component to update the attached step's selection in Tableau CRM. In doing so, it potentially applies filters to the rest of the dashboard's contents depending on how the widgets are configured.
+    ```
+    this.setSelection(this.isMultiSelect() ? [...selecedRowsByHash.values(), row] : [row]);
+    ```
+
+**Select Mode**
+
+Available when a component has `<hasStep>true</hasStep>`, `selectMode` describes which select mode the results from step are in. Possible values are `single`, `multi`, `singlerequired`, `multirequired`, and `none`.
+    ```
+    isMultiSelect() { return this.selectMode.includes('multi'); }
+    ```
+
+**getState**
+
+Always available to the component, `getState` is used to retrieve the current state of the dashboard. The state format is documented [here](https://help.salesforce.com/articleView?id=sf.bi_embed_filters.htm&type=5).
+
+**setState**
+
+Always available to the component, `setState` is used to patch the current state of the dashboard.
+    ```
+    if (!this.getState().pageId == this.targetPage) {
+        this.priorPage = this.getState().pageId;
+        this.setState({...this.getState(), pageId : this.targetPage});
+    }
+
 ## Tableau CRM App Templates
 
 Use the Quick Start template to practice working with Tableau CRM app templates in your scratch org. Then, create
 your own apps and templatize them using the Analytics CLI plugin and Visual Studio commands.
 
-Navigate to the sfdx-analytics directory in a terminal:
-
-1. Update the adminEmail in config/project-scratch-def.json to your email address
-
-    ```
-    sfdx force:org:open -u mydevorg
-    ```
-
-1.  Authenticate to your dev hub.
-    ```
-    sfdx force:auth:web:login -d
-    ```
-
-1.  Create a scratch org that is Analytics enabled.
-    ```
-    sfdx force:org:create -s -f config/project-scratch-def.json
-    ```
-
-1.  Push the sample Analytics template from the local workspace to the scratch org
-    ```
-    sfdx force:source:push
-    ```
-
-1. Install the Analytics SFDX plugin
-    ```
-    sfdx plugins:install @salesforce/analytics
-    ```
-
-## Tableau CRM App Template Commands
-
 1. Now you have a scratch org with an Analytics template installed.  Explore the Analytics commands by running
     ```
     sfdx analytics --help
     ```
+or open the Visual Studio command palette and search for available `SFDX` commands
 
 1. View the options available to create an Analytics template from an app
     ```
     sfdx analytics:app:create --help
+    ```
+    or
+    ```
+    SFDX: Create Analytics Template
     ```
 
 1. View the Analytics template:
@@ -214,17 +208,20 @@ Navigate to the sfdx-analytics directory in a terminal:
         ```
         sfdx analytics:app:create -t <templateid>
         ```
+        or
+        ```
+        SFDX: Create Analytics App from Template
+        ```
 
     1. From Analytics Studio
 
-        1. Onetime: set environment variable so you always open to Analytics Page
-            ```
-            export FORCE_OPEN_URL=/analytics/home
-            ```
-
         1. Open the scratch org
             ```
-            sfdx force:org:open
+            sfdx force:org:open -p analytics
+            ```
+            or
+            ```
+            SFDX: Open Analytics Studio
             ```
 
         1. Select 'Create' > 'App' > 'Start From Template' in Analytics Studio
