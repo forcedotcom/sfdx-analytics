@@ -174,6 +174,20 @@ Always available to the component, `setState` is used to patch the current state
         this.setState({...this.getState(), pageId : this.targetPage});
     }
 
+**Create a LWC for Tableau CRM Dashboards**
+
+Quickly create Lightning Web Components configured for use in Tableau CRM dashboards
+
+1. Visual Studio command
+    ```
+    SFDX: Create Analytics Dashboard LWC
+    ```
+
+1. CLI command
+    ```
+    sfdx force:lightning:component:create --type lwc -t [analyticsDashboard|analyticsDashboardWithStep] -n <name>
+    ```
+
 
 ## Tableau CRM App Templates
 
