@@ -56,7 +56,9 @@ For App Templates, there is Quick Start project to get users using the power of 
     sfdx plugins:install @salesforce/analytics
     ```
 
-1. Create a scratch org and provide it with an alias (sfdx-analytics in the command below):
+1. Update the adminEmail in config/project-scratch-def.json to your email address.
+
+1. Create a scratch org, providing an org alias (sfdx-analytics in the command below):
 
     ```
     sfdx force:org:create -s -f config/project-scratch-def.json -a sfdx-analytics
@@ -68,7 +70,7 @@ For App Templates, there is Quick Start project to get users using the power of 
     sfdx force:source:push
     ```
 
-1. Update the adminEmail in config/project-scratch-def.json to your email address and open your sc
+1.  Open your scratch org.
 
     ```
     sfdx force:org:open -u myhuborg
