@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+
+    <masterLabel>Graph</masterLabel>
+    <description>A force-directed graph.</description>
+
+     <targets>
+        <target>analytics__Dashboard</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="analytics__Dashboard">
+            <hasStep>true</hasStep>
+
+            <property name="sourceField" type="Dimension" label="Source Column" description="Edge sources." required="true" />
+            <property name="destinationField" type="Dimension" label="Destination Column" description="Edge destinations." required="true" />
+            <property name="valueField" type="Measure" label="Value Column" description="Option numeric weight for an edge." />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

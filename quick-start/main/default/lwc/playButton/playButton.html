@@ -1,0 +1,27 @@
+<template>
+  <div class="slds-p-around_medium lgc-bg">
+    <lightning-button-icon
+      icon-name="utility:jump_to_left"
+      variant="border-filled"
+      alternative-text="Reset"
+      title="Reset"
+      onclick={resetCounter}
+    ></lightning-button-icon>
+    <lightning-button-icon
+      icon-name="utility:stop"
+      variant="border-filled"
+      alternative-text="Stop"
+      class="slds-m-left_xx-small"
+      title="Stop"
+      onclick={stopPlaying}
+    ></lightning-button-icon>
+    <lightning-button-icon
+      icon-name="utility:play"
+      variant="border-filled"
+      alternative-text="Play"
+      class="slds-m-left_xx-small"
+      title="Play"
+      onclick={startPlaying}
+    ></lightning-button-icon>
+  </div>
+</template>

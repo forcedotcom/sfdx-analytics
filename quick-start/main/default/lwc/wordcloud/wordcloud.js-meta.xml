@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Word Cloud</masterLabel>
+    <targets>
+        <target>analytics__Dashboard</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="analytics__Dashboard">
+            <hasStep>true</hasStep>
+            <property name="wordColumn" type="Dimension" label="Words" description="Column with Words to Display" required="true" />
+            <property name="measureColumn" type="Measure" label="Measure Column" description="Numerical Value defining word size" required="true" />
+            <property name="height" type="Integer" label="Height (px)" description="Height of the canvas" min="1" default="500" />
+            <property name="width" type="Integer" label="Width (px)" description="Width of the canvas" min="1" default="600" />
+            <property name="minTextSize" type="Integer" label="Min Text Size" description="Minimum size of the text in px" min="1" default="5" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

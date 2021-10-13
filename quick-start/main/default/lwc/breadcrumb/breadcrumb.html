@@ -1,0 +1,35 @@
+<template>
+  <lightning-card>
+    <h3 slot="title">
+      <lightning-icon icon-name="standard:dashboard_ea" size="small"></lightning-icon>
+      Dashboard State
+      <lightning-helptext content={stringState}>
+        <lightning-icon icon-name="utility:info" size="small"></lightning-icon>
+      </lightning-helptext>
+    </h3>
+    <div slot="footer">
+      <h4>Current Page: <lightning-badge label={currentPage}></lightning-badge></h4>
+    </div>
+
+    <template if:true={datasets}>
+      <template for:each={datasets} for:item="dataset">
+        <lightning-tile label={dataset.key} key={dataset.key} type="media">
+          <lightning-icon slot="media" icon-name="standard:dataset"></lightning-icon>
+          <p class="slds-truncate" title="\${dataset.size} Members">{dataset.size} Filters</p>
+        </lightning-tile>
+        <template for:each={dataset.filters} for:item="filter">
+          <lightning-badge label={filter.value} key={filter.field}></lightning-badge>
+        </template>
+        <hr key={dataset.key} />
+      </template>
+    </template>
+
+    <template for:each={steps} for:item="step">
+      <lightning-tile label={step.name} key={step.key} type="media">
+        <lightning-icon slot="media" icon-name="utility:table"></lightning-icon>
+        <p class="slds-truncate" title={step.value}>{step.value}</p>
+      </lightning-tile>
+    </template>
+    <!--<p class="slds-p-horizontal_small">{stringState}</p>-->
+  </lightning-card>
+</template>

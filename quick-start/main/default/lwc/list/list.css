@@ -1,0 +1,7 @@
+li:not(:last-child) {
+  padding-bottom: 0.5rem;
+}
+
+input {
+  padding-right: 0.25rem;
+}

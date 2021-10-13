@@ -1,0 +1,37 @@
+.dropdown {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #c5d3e0;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 35%);
+  z-index: 1;
+  width: 14.38rem;
+  height: 14rem;
+  padding: 12px;
+}
+
+.group {
+}
+
+.line {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.375rem;
+}
+
+.item {
+  display: inline-block;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.375rem;
+  border-radius: 0.25rem;
+  border: 1px solid #c5d2e0;
+  position: relative;
+}
+
+.item.blank {
+  border-color: transparent;
+  background-color: transparent;
+  visibility: hidden;
+}
