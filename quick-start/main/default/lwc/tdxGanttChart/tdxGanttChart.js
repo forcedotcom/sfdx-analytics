@@ -212,7 +212,7 @@ export default class tdxGanttChart extends LightningElement {
 
     this.chartjsInitialized = true;
 
-    loadScript(this, MOMENT_JS)
+    loadScript(this, MOMENT_JS + '/moment.js')
       .then(Promise.all([loadScript(this, chartjs2 + '/Chart.min.js'), loadStyle(this, chartjs2 + '/Chart.min.css')]))
       .then(() => loadScript(this, chartjsPluginSubtitle + '/chartjs-plugin-subtitle.min.js'))
       .then(() => loadScript(this, chartjsPluginGantt + '/chartjs-plugin-gantt.min.js'))

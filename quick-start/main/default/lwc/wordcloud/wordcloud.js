@@ -1,5 +1,5 @@
 import { LightningElement, api } from 'lwc';
-import cloud from '@salesforce/resourceUrl/wordCloud2';
+import wordCloud2 from '@salesforce/resourceUrl/wordcloud2';
 import { NavigationMixin } from 'lightning/navigation';
 import { loadScript } from 'lightning/platformResourceLoader';
 
@@ -24,7 +24,7 @@ export default class wordCloudLayout extends NavigationMixin(LightningElement) {
       this.list.push([row[this.wordColumn], row[this.measureColumn]]);
     });
 
-    loadScript(this, cloud)
+    loadScript(this, wordCloud2 + '/wordcloud2.js')
       .then(() => {
         this.jsInitialized = true;
         this.initializeWordCloud();
