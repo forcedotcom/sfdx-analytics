@@ -1,5 +1,4 @@
 {
-    "templateSourceId" : "0Nk1k0000004CFpCAM",
-    "templateOptions" : { "appAction" : "DecoupleApp" }
+  "templateSourceId": "0Nk1k0000004CFpCAM",
+  "templateOptions": { "appAction": "DecoupleApp" }
 }
-       

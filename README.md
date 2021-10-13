@@ -2,7 +2,7 @@
 
 ![recipes-logo](recipes-logo.png)
 
-A collection of Tableau CRM code examples for Lightning Web Components (LWC) and App Templates. 
+A collection of Tableau CRM code examples for Lightning Web Components (LWC) and App Templates.
 
 For LWC, each example demonstrates how to code third party Analytics visualizations into LWC. Current examples include a Gantt Chart, a graph, a hierarchy, a list, and an integration with the [Chart.js library](https://www.chartjs.org/). For additional infomation, see the [Lightning Web Components in Tableau CRM Dashboards (Beta)](https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_lwc_in_db.meta/bi_dev_guide_lwc_in_db/bi_lwc_in_db_overview.htm) developer guide.
 
@@ -20,68 +20,68 @@ For App Templates, there is Quick Start project to get users using the power of 
 
 ## Table of contents
 
--   [Installing the app using a Scratch Org](#installing-the-app-using-a-scratch-org): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
+- [Installing the app using a Scratch Org](#installing-the-app-using-a-scratch-org): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
 
--   [Tableau CRM LWC Metadata](#tableau-crm-lwc-metadata)
+- [Tableau CRM LWC Metadata](#tableau-crm-lwc-metadata)
 
--   [Tableau CRM LWC Features](#tableau-crm-lwc-features)
+- [Tableau CRM LWC Features](#tableau-crm-lwc-features)
 
--   [Tableau CRM App Templates](#tableau-crm-app-templates)
+- [Tableau CRM App Templates](#tableau-crm-app-templates)
 
 ## Installing the app using a Scratch Org
 
 1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
 
-    - Enable Dev Hub in your Trailhead Playground
-    - Install Salesforce CLI
-    - Install the Analytics Plugin for the Salesforce CLI
-    - Install Visual Studio Code
-    - Install the Visual Studio Code Salesforce extensions, including the Lightning Web Components ansd Salesforce Analytics - App Templates extensions.
+   - Enable Dev Hub in your Trailhead Playground
+   - Install Salesforce CLI
+   - Install the Analytics Plugin for the Salesforce CLI
+   - Install Visual Studio Code
+   - Install the Visual Studio Code Salesforce extensions, including the Lightning Web Components ansd Salesforce Analytics - App Templates extensions.
 
 1. If you haven't already done so, authorize your hub org and provide it with an alias (**myhuborg** in the command below):
 
-    ```
-    sfdx auth:web:login -d -a myhuborg
-    ```
+   ```
+   sfdx auth:web:login -d -a myhuborg
+   ```
 
 1. Clone the forcedotcom/sfdx-analytics repository:
 
-    ```
-    git clone https://github.com/forcedotcom/sfdx-analytics.git
-    cd sfdx-analytics
-    ```
+   ```
+   git clone https://github.com/forcedotcom/sfdx-analytics.git
+   cd sfdx-analytics
+   ```
 
 1. Install the Analytics SFDX plugin
-    ```
-    sfdx plugins:install @salesforce/analytics
-    ```
+
+   ```
+   sfdx plugins:install @salesforce/analytics
+   ```
 
 1. Update the adminEmail in config/project-scratch-def.json to your email address.
 
 1. Create a scratch org, providing an org alias (sfdx-analytics in the command below):
 
-    ```
-    sfdx force:org:create -s -f config/project-scratch-def.json -a sfdx-analytics
-    ```
+   ```
+   sfdx force:org:create -s -f config/project-scratch-def.json -a sfdx-analytics
+   ```
 
 1. Push the LWC and template sampleas to your scratch org:
 
-    ```
-    sfdx force:source:push
-    ```
+   ```
+   sfdx force:source:push
+   ```
 
-1.  Open your scratch org.
+1. Open your scratch org.
 
-    ```
-    sfdx force:org:open -u myhuborg
-    ```
-
+   ```
+   sfdx force:org:open -u myhuborg
+   ```
 
 ## Tableau CRM LWC Metadata
 
 Lightning Web Components used in Tableau CRM dashboards leverage the same file structure and [XML metadata format](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_configuration_tags) used by other LWCs on the Salesforce platform. Here are few additions to this metadata specific for Tableau CRM.
 
-**analytics__Dashboard Target**
+**analytics\_\_Dashboard Target**
 
 Adding this target to the list of `<targets>` for your component allows it to be used in Tableau CRM dashboards, provided that your component is public. You can also add a `<targetConfig>` for the new target to further customize how your component appears in dashboards.
 
@@ -108,7 +108,7 @@ Each component configured for the `analytics__Dashboard` target has properties t
     |};
     type Selection = Data;
     type SetSelection = (Selection) => void;
-    type SelectMode = 
+    type SelectMode =
         | 'none'
         | 'single'
         | 'multi'
@@ -126,7 +126,7 @@ For more information on `type` syntax, see [Type Annotations](https://flow.org/e
 
 **Data**
 
-Available when a component has `<hasStep>true</hasStep>`, `data` returns the query results of the step as an array of maps. 
+Available when a component has `<hasStep>true</hasStep>`, `data` returns the query results of the step as an array of maps.
 
     [
         {columnOne: 'one', columnTwo: 123},
@@ -179,63 +179,73 @@ Always available to the component, `setState` is used to patch the current state
 Quickly create Lightning Web Components configured for use in Tableau CRM dashboards
 
 1. Visual Studio command
-    ```
-    SFDX: Create Analytics Dashboard LWC
-    ```
+
+   ```
+   SFDX: Create Analytics Dashboard LWC
+   ```
 
 1. CLI command
-    ```
-    sfdx force:lightning:component:create --type lwc -t [analyticsDashboard|analyticsDashboardWithStep] -n <name>
-    ```
-
+   ```
+   sfdx force:lightning:component:create --type lwc -t [analyticsDashboard|analyticsDashboardWithStep] -n <name>
+   ```
 
 ## Tableau CRM App Templates
 
 Use the Quick Start template to practice working with Tableau CRM app templates in your scratch org. Then, create
 your own apps and templatize them using the Analytics CLI plugin and Visual Studio commands.
 
-1. Now you have a scratch org with an Analytics template installed.  Explore the Analytics commands by running
-`sfdx analytics --help`or open the Visual Studio command palette and search for available `SFDX` commands.
+1. Now you have a scratch org with an Analytics template installed. Explore the Analytics commands by running
+   `sfdx analytics --help`or open the Visual Studio command palette and search for available `SFDX` commands.
 
 1. View the options available to create an Analytics template from an app
-    ```
-    sfdx analytics:app:create --help
-    ```
-    or
-    ```
-    SFDX: Create Analytics Template
-    ```
+
+   ```
+   sfdx analytics:app:create --help
+   ```
+
+   or
+
+   ```
+   SFDX: Create Analytics Template
+   ```
 
 1. View the Analytics template:
-    ```
-    sfdx analytics:template:list
-    ```
+
+   ```
+   sfdx analytics:template:list
+   ```
 
 1. To create an Analytics application from the template you have two options:
 
-    1. From CLI:
-        ```
-        sfdx analytics:app:create -t <templateid>
-        ```
-        or
-        ```
-        SFDX: Create Analytics App from Template
-        ```
+   1. From CLI:
 
-    1. From Analytics Studio
+      ```
+      sfdx analytics:app:create -t <templateid>
+      ```
 
-        1. Open the scratch org
-            ```
-            sfdx force:org:open -p analytics
-            ```
-            or
-            ```
-            SFDX: Open Analytics Studio
-            ```
+      or
 
-        1. Select 'Create' > 'App' > 'Start From Template' in Analytics Studio
+      ```
+      SFDX: Create Analytics App from Template
+      ```
+
+   1. From Analytics Studio
+
+      1. Open the scratch org
+
+         ```
+         sfdx force:org:open -p analytics
+         ```
+
+         or
+
+         ```
+         SFDX: Open Analytics Studio
+         ```
+
+      1. Select 'Create' > 'App' > 'Start From Template' in Analytics Studio
 
 1. To view the Analytics applications from the CLI:
-    ```
-    sfdx analytics:app:list
-    ``` 
+   ```
+   sfdx analytics:app:list
+   ```

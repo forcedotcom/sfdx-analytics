@@ -872,10 +872,7 @@
           "trellis": {
             "flipLabels": false,
             "showGridLines": true,
-            "size": [
-              100,
-              100
-            ],
+            "size": [100, 100],
             "enable": false,
             "type": "x",
             "parameters": {},

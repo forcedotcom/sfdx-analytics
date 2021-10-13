@@ -1,4 +1,4 @@
 {
-    "templateSourceId" : "<template-id>",
-    "templateOptions" : { "appAction" : "Upgrade" }
+  "templateSourceId": "<template-id>",
+  "templateOptions": { "appAction": "Upgrade" }
 }
