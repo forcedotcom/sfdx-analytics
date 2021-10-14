@@ -6,13 +6,7 @@
         {
           "name": "constructAmortizedScheduleItem",
           "description": "Generates a single payment payment object.",
-          "parameters": [
-            "PaymentNumber",
-            "MonthlyPayment",
-            "LoanAmount",
-            "MPR",
-            "LoanTermsInMonths"
-          ],
+          "parameters": ["PaymentNumber", "MonthlyPayment", "LoanAmount", "MPR", "LoanTermsInMonths"],
           "actions": [
             {
               "action": "eval",

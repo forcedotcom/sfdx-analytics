@@ -71,28 +71,19 @@
           "action": "put",
           "path": "$.state.steps.Monthly_Payments",
           "key": "strings",
-          "value": [
-            "Payment",
-            "Balance"
-          ]
+          "value": ["Payment", "Balance"]
         },
         {
           "action": "put",
           "path": "$.state.steps.Monthly_Payments",
           "key": "numbers",
-          "value": [
-            "Interest",
-            "Principal",
-            "Total"
-          ]
+          "value": ["Interest", "Principal", "Total"]
         },
         {
           "action": "put",
           "path": "$.state.steps.Monthly_Payments",
           "key": "groups",
-          "value": [
-            "Payment"
-          ]
+          "value": ["Payment"]
         }
       ]
     }

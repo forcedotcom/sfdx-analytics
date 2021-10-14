@@ -15,15 +15,7 @@
     "required": true,
     "variableType": {
       "type": "NumberType",
-      "enums": [
-        1,
-        5,
-        10,
-        15,
-        20,
-        25,
-        30
-      ]
+      "enums": [1, 5, 10, 15, 20, 25, 30]
     }
   },
   "AnnualPercentageRate": {
@@ -42,11 +34,7 @@
     "required": true,
     "variableType": {
       "type": "StringType",
-      "enums": [
-        "line",
-        "combo",
-        "heatmap"
-      ]
+      "enums": ["line", "combo", "heatmap"]
     }
   },
   "Overrides": {
@@ -76,45 +64,27 @@
       "properties": {
         "createAllDashboards": {
           "type": "BooleanType",
-          "enums": [
-            true,
-            false
-          ]
+          "enums": [true, false]
         },
         "createAllLenses": {
           "type": "BooleanType",
-          "enums": [
-            true,
-            false
-          ]
+          "enums": [true, false]
         },
         "createAllExternalFiles": {
           "type": "BooleanType",
-          "enums": [
-            true,
-            false
-          ]
+          "enums": [true, false]
         },
         "createDataflow": {
           "type": "BooleanType",
-          "enums": [
-            true,
-            false
-          ]
+          "enums": [true, false]
         },
         "createAllDatasetFiles": {
           "type": "BooleanType",
-          "enums": [
-            true,
-            false
-          ]
+          "enums": [true, false]
         },
         "createAllImages": {
           "type": "BooleanType",
-          "enums": [
-            true,
-            false
-          ]
+          "enums": [true, false]
         }
       },
       "strictValidation": true

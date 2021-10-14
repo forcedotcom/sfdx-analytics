@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Select Navigate</masterLabel>
+    <targets>
+        <target>analytics__Dashboard</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="analytics__Dashboard">
+            <hasStep>true</hasStep>
+
+            <property name="targetPage" type="String" label="Target Page" description="ID of page to navigate to on selection." />
+
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Play Button</masterLabel>
+    <targets>
+        <target>analytics__Dashboard</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="analytics__Dashboard">
+            <hasStep>true</hasStep>
+            <property name="delay" type="Integer" label="Delay (ms)" description="Delay between steps in milliseconds." min="1" default="2000" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

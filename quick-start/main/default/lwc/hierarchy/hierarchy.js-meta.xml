@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+
+    <masterLabel>Hierarchy</masterLabel>
+    <description>A generic hierarchy component.</description>
+
+    <targets>
+        <target>analytics__Dashboard</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="analytics__Dashboard">
+            <hasStep>true</hasStep>
+
+            <property name="idColumn" type="Dimension" label="ID Column" description="Primary key." required="true" />
+            <property name="parentIdColumn" type="Dimension" label="Parent ID Column" description="Self-reference to parent record." required="true" />
+            <property name="labelColumn" type="Dimension" label="Label Column" description="Record label." required="true" />
+            <property name="root" type="String" label="Root Node" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

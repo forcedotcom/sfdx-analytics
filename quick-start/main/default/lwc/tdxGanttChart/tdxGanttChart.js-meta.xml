@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>TDX Gantt Chart Demo</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>analytics__Dashboard</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="analytics__Dashboard">
+            <hasStep>true</hasStep>
+            <property name="fromColumn" type="Dimension" label="From Column" description="Start of segment." required="true"/>
+            <property name="toColumn" type="Dimension" label="To Column" description="End of segment." required="true"/>
+            <property name="labelColumn" type="Dimension" label="Label Column" description="Segment label." required="true"/>
+            <property name="colorColumn" type="Dimension" label="Color Column" description="Segment color." required="true"/>
+            <property name="axesType" type="String" label="Axes Type" description="The type of axes, linear or time." required="true" default="linear"/>
+            <property name="title" type="String" label="Title" description="The title for the chart." required="false" default=""/>
+            <property name="titleFontSize" type="Integer" label="Title Font Size" description="The title font size for the chart." required="false" default="14"/>
+            <property name="subtitle" type="String" label="Subtitle" description="The subtitle for the chart." required="false" default="G"/>
+            <property name="subtitleFontSize" type="Integer" label="Subtitle Font Size" description="The subtitle font size for the chart." required="false" default="11"/>
+            <property name="theme" type="String" label="Theme" description="Theme to use for the chart." required="true" default="Default"/>
+            <property name="backgroundColor" type="String" label="Background Color" description="The background color for the chart." required="true" default="#FFFFFF"/>
+            <property name="label" type="String" label="Label" description="The label for the chart." required="true" default="Gantt Chart"/>
+            <property name="paletteName" type="String" label="Palette Name (Deprecated)" description="Palette Name (Deprecated)." required="false" default="Default"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

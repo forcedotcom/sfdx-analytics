@@ -1,0 +1,18 @@
+<template>
+  <div class="slds-m-around_medium">
+    <h1>{title}</h1>
+    <ul>
+      <template for:each={listItems} for:item="listItem">
+        <li key={listItem.label} onpointerup={listItem.onPointerUp}>
+          <template if:true={listItem.checked}>
+            <input type={listItem.inputType} checked={listItem.checked} />
+          </template>
+          <template if:false={listItem.checked}>
+            <input type={listItem.inputType} />
+          </template>
+          <span>{listItem.label}</span>
+        </li>
+      </template>
+    </ul>
+  </div>
+</template>

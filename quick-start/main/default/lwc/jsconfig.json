@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "c/graph": ["graph/graph.js"]
+    }
+  },
+  "include": ["**/*", "../../../../.sfdx/typings/lwc/**/*.d.ts"],
+  "typeAcquisition": {
+    "include": ["jest"]
+  },
+  "paths": {
+    "c/*": ["*"]
+  }
+}

@@ -1,0 +1,13 @@
+<template>
+  <template for:each={selectionText} for:item="selectionItem">
+    <lightning-button
+      variant="base"
+      label={selectionItem}
+      title={selectionItem}
+      key={selectionItem}
+      onclick={clearSelection}
+      class="slds-m-left_x-small"
+    >
+    </lightning-button>
+  </template>
+</template>
