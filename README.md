@@ -2,7 +2,7 @@
 
 ![recipes-logo](recipes-logo.png)
 
-A collection of Tableau CRM code examples for Lightning Web Components (LWC) and App Templates.
+A collection of CRM Analytics code examples for Lightning Web Components (LWC) and App Templates.
 
 For LWC, each example demonstrates how to code third party Analytics visualizations into LWC. Current examples include a Gantt Chart, a graph, a hierarchy, a list, and an integration with the [Chart.js library](https://www.chartjs.org/). For additional infomation, see the [Lightning Web Components in Tableau CRM Dashboards (Beta)](https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_lwc_in_db.meta/bi_dev_guide_lwc_in_db/bi_lwc_in_db_overview.htm) developer guide.
 
@@ -22,11 +22,11 @@ For App Templates, there is Quick Start project to get users using the power of 
 
 - [Installing the app using a Scratch Org](#installing-the-app-using-a-scratch-org): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
 
-- [Tableau CRM LWC Metadata](#tableau-crm-lwc-metadata)
+- [CRM Analytics LWC Metadata](#crm-analytics-lwc-metadata)
 
-- [Tableau CRM LWC Features](#tableau-crm-lwc-features)
+- [CRM Analytics LWC Features](#crm-analytics-lwc-features)
 
-- [Tableau CRM App Templates](#tableau-crm-app-templates)
+- [CRM Analytics App Templates](#crm-analytics-app-templates)
 
 ## Installing the app using a Scratch Org
 
@@ -77,23 +77,23 @@ For App Templates, there is Quick Start project to get users using the power of 
    sfdx force:org:open -u myhuborg
    ```
 
-## Tableau CRM LWC Metadata
+## CRM Analytics LWC Metadata
 
-Lightning Web Components used in Tableau CRM dashboards leverage the same file structure and [XML metadata format](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_configuration_tags) used by other LWCs on the Salesforce platform. Here are few additions to this metadata specific for Tableau CRM.
+Lightning Web Components used in CRM Analytics dashboards leverage the same file structure and [XML metadata format](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_configuration_tags) used by other LWCs on the Salesforce platform. Here are few additions to this metadata specific for Tableau CRM.
 
 **analytics\_\_Dashboard Target**
 
-Adding this target to the list of `<targets>` for your component allows it to be used in Tableau CRM dashboards, provided that your component is public. You can also add a `<targetConfig>` for the new target to further customize how your component appears in dashboards.
+Adding this target to the list of `<targets>` for your component allows it to be used in CRM Analytics dashboards, provided that your component is public. You can also add a `<targetConfig>` for the new target to further customize how your component appears in dashboards.
 
 **`<hasStep>` Tag**
 
-In an `analyticsDashboard` target config, you can choose to include a `<hasStep>true</hasStep>` tag to indicate that your component requires an attached step to function as expected. With this tag, the dashboard builder UI prompts you to attach an existing step or create a new step when creating an instance of your component. Components with an attached step have access to step-specific properties like `results` and `selection`. For more information on these properties, see [Tableau CRM LWC Features](#tableau-crm-lwc-features).
+In an `analyticsDashboard` target config, you can choose to include a `<hasStep>true</hasStep>` tag to indicate that your component requires an attached step to function as expected. With this tag, the dashboard builder UI prompts you to attach an existing step or create a new step when creating an instance of your component. Components with an attached step have access to step-specific properties like `results` and `selection`. For more information on these properties, see [CRM Analytics LWC Features](#crm-analytics-lwc-features).
 
 **Measure and Dimension Attribute Data Types**
 
-Attributes specified in a LWC's `analtyicsDashboard` target config are displayed in the Tableau CRM dashboard builder UI for configuration. In addition to the common data types, this target also supports `Measure` and `Dimension` data types for components with `<hasStep>true</hasStep>`. Dashboard builders are able to choose a column of the given data type from the results of the attached step.
+Attributes specified in a LWC's `analtyicsDashboard` target config are displayed in the TCRM Analytics dashboard builder UI for configuration. In addition to the common data types, this target also supports `Measure` and `Dimension` data types for components with `<hasStep>true</hasStep>`. Dashboard builders are able to choose a column of the given data type from the results of the attached step.
 
-## Tableau CRM LWC Features
+## CRM Analytics LWC Features
 
 **Types**
 
@@ -174,9 +174,17 @@ Always available to the component, `setState` is used to patch the current state
         this.setState({...this.getState(), pageId : this.targetPage});
     }
 
+**stateChangedCallback**
+Available as a custom lifecycle hook, `stateChangedCallback` is used to detect any change to the dashboard state and allow the component to rerender.
+
+    stateChangedCallback(prevState, newState) {
+        // Do any comparisons on prevState and newState to determine if the component should rerender
+        this.currentState = newState;
+    }
+
 **Create a LWC for Tableau CRM Dashboards**
 
-Quickly create Lightning Web Components configured for use in Tableau CRM dashboards
+Quickly create Lightning Web Components configured for use in CRM Analytics dashboards
 
 1. Visual Studio command
 
@@ -189,9 +197,9 @@ Quickly create Lightning Web Components configured for use in Tableau CRM dashbo
    sfdx force:lightning:component:create --type lwc -t [analyticsDashboard|analyticsDashboardWithStep] -n <name>
    ```
 
-## Tableau CRM App Templates
+## CRM Analytics App Templates
 
-Use the Quick Start template to practice working with Tableau CRM app templates in your scratch org. Then, create
+Use the Quick Start template to practice working with CRM Analytics app templates in your scratch org. Then, create
 your own apps and templatize them using the Analytics CLI plugin and Visual Studio commands.
 
 1. Now you have a scratch org with an Analytics template installed. Explore the Analytics commands by running
