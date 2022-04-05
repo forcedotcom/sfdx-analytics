@@ -1,4 +1,4 @@
-# Tableau CRM Template and Lightning Web Components Examples
+# CRM Analytics Template and Lightning Web Components Examples
 
 ![recipes-logo](recipes-logo.png)
 
