@@ -4,9 +4,9 @@
 
 A collection of CRM Analytics code examples for Lightning Web Components (LWC) and App Templates.
 
-For LWC, each example demonstrates how to code third party Analytics visualizations into LWC. Current examples include a Gantt Chart, a graph, a hierarchy, a list, and an integration with the [Chart.js library](https://www.chartjs.org/). For additional infomation, see the [Lightning Web Components in Tableau CRM Dashboards (Beta)](https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_lwc_in_db.meta/bi_dev_guide_lwc_in_db/bi_lwc_in_db_overview.htm) developer guide.
+For LWC, each example demonstrates how to code third party Analytics visualizations into LWC. Current examples include a Gantt Chart, a graph, a hierarchy, a list, and an integration with the [Chart.js library](https://www.chartjs.org/). For additional infomation, see the [Lightning Web Components in CRM Analytics Dashboards (Beta)](https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_lwc_in_db.meta/bi_dev_guide_lwc_in_db/bi_lwc_in_db_overview.htm) developer guide.
 
-For App Templates, there is Quick Start project to get users using the power of SFDX to develop Analytics templates. For additional information on template creation and deep-dive details, see the [Tableau CRM Templates Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_wave_templates.meta/bi_dev_guide_wave_templates/bi_templatesdev_intro_wave_templates.htm).
+For App Templates, there is Quick Start project to get users using the power of SFDX to develop Analytics templates. For additional information on template creation and deep-dive details, see the [CRM Analytics Templates Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_wave_templates.meta/bi_dev_guide_wave_templates/bi_templatesdev_intro_wave_templates.htm).
 
 <div>
     <img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70,w_50/learn/projects/quick-start-lwc-recipes-app/bb501c3216ac163958f036fb90357955_badge.png" align="left" alt="Trailhead Badge"/>
@@ -79,7 +79,7 @@ For App Templates, there is Quick Start project to get users using the power of 
 
 ## CRM Analytics LWC Metadata
 
-Lightning Web Components used in CRM Analytics dashboards leverage the same file structure and [XML metadata format](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_configuration_tags) used by other LWCs on the Salesforce platform. Here are few additions to this metadata specific for Tableau CRM.
+Lightning Web Components used in CRM Analytics dashboards leverage the same file structure and [XML metadata format](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_configuration_tags) used by other LWCs on the Salesforce platform. Here are few additions to this metadata specific for CRM Analytics.
 
 **analytics\_\_Dashboard Target**
 
@@ -151,7 +151,7 @@ Available when a component has `<hasStep>true</hasStep>`, `selection` is the cur
 
 **setSelelction**
 
-Available when a component has `<hasStep>true</hasStep>`, `setSelection` is a callback passed in that allows the component to update the attached step's selection in Tableau CRM. In doing so, it potentially applies filters to the rest of the dashboard's contents depending on how the widgets are configured.
+Available when a component has `<hasStep>true</hasStep>`, `setSelection` is a callback passed in that allows the component to update the attached step's selection in CRM Analytics. In doing so, it potentially applies filters to the rest of the dashboard's contents depending on how the widgets are configured.
 
     this.setSelection(this.isMultiSelect() ? [...selecedRowsByHash.values(), row] : [row]);
 
@@ -182,7 +182,7 @@ Available as a custom lifecycle hook, `stateChangedCallback` is used to detect a
         this.currentState = newState;
     }
 
-**Create a LWC for Tableau CRM Dashboards**
+**Create a LWC for CRM Analytics Dashboards**
 
 Quickly create Lightning Web Components configured for use in CRM Analytics dashboards
 
