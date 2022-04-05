@@ -175,6 +175,7 @@ Always available to the component, `setState` is used to patch the current state
     }
 
 **stateChangedCallback**
+
 Available as a custom lifecycle hook, `stateChangedCallback` is used to detect any change to the dashboard state and allow the component to rerender.
 
     stateChangedCallback(prevState, newState) {
