@@ -163,11 +163,11 @@ Available when a component has `<hasStep>true</hasStep>`, `selectMode` describes
 
 **getState**
 
-Always available to the component, `getState` is used to retrieve the current state of the dashboard. The state format is documented [here](https://help.salesforce.com/articleView?id=sf.bi_embed_filters.htm&type=5).
+Always available to the component, use `getState` to retrieve the current state of the dashboard. The state format is documented [here](https://help.salesforce.com/articleView?id=sf.bi_embed_filters.htm&type=5).
 
 **setState**
 
-Always available to the component, `setState` is used to patch the current state of the dashboard.
+Always available to the component, use `setState` to patch the current state of the dashboard.
 
     if (!this.getState().pageId == this.targetPage) {
         this.priorPage = this.getState().pageId;
@@ -176,7 +176,7 @@ Always available to the component, `setState` is used to patch the current state
 
 **stateChangedCallback**
 
-Available as a custom lifecycle hook, `stateChangedCallback` is used to detect any change to the dashboard state and allow the component to rerender.
+Available as a custom lifecycle hook in v55 and later, use `stateChangedCallback` to detect any change to the dashboard state and allow the component to rerender.
 
     stateChangedCallback(prevState, newState) {
         // Do any comparisons on prevState and newState to determine if the component should rerender
