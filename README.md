@@ -178,7 +178,7 @@ Always available to the component, use `setState` to patch the current state of 
 
 Available as a custom lifecycle hook in v55 and later, use `stateChangedCallback` to detect any change to the dashboard state and allow the component to rerender.
 
-    stateChangedCallback(prevState, newState) {
+    @api stateChangedCallback(prevState, newState) {
         // Do any comparisons on prevState and newState to determine if the component should rerender
         this.currentState = newState;
     }
