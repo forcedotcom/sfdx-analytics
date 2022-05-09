@@ -91,7 +91,7 @@ In an `analyticsDashboard` target config, you can choose to include a `<hasStep>
 
 **Measure and Dimension Attribute Data Types**
 
-Attributes specified in a LWC's `analtyicsDashboard` target config are displayed in the TCRM Analytics dashboard builder UI for configuration. In addition to the common data types, this target also supports `Measure` and `Dimension` data types for components with `<hasStep>true</hasStep>`. Dashboard builders are able to choose a column of the given data type from the results of the attached step.
+Attributes specified in a LWC's `analtyicsDashboard` target config are displayed in the CRM Analytics dashboard builder UI for configuration. In addition to the common data types, this target also supports `Measure` and `Dimension` data types for components with `<hasStep>true</hasStep>`. Dashboard builders are able to choose a column of the given data type from the results of the attached step.
 
 ## CRM Analytics LWC Features
 
@@ -178,7 +178,7 @@ Always available to the component, use `setState` to patch the current state of 
 
 Available as a custom lifecycle hook in v55 and later, use `stateChangedCallback` to detect any change to the dashboard state and allow the component to rerender.
 
-    stateChangedCallback(prevState, newState) {
+    @api stateChangedCallback(prevState, newState) {
         // Do any comparisons on prevState and newState to determine if the component should rerender
         this.currentState = newState;
     }
